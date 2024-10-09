@@ -1,11 +1,11 @@
-$BackgroundsOrigin: (
+$data: (
   'bg-origin-border': border-box,
   'bg-origin-padding': padding-box,
   'bg-origin-content': content-box,
 );
 
 @if $isBasic {
-  @each $key, $value in $BackgroundsOrigin {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key}{
       @include background-origin(#{$value});
@@ -14,9 +14,9 @@ $BackgroundsOrigin: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $BackgroundsOrigin {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key}{
         @include background-origin(#{$value}, #{$rwd});

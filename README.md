@@ -1,4 +1,4 @@
-![logo](/src/assets/logo.png)
+![logo](https://github.com/ESCSS-labs/ESCSS/blob/main/assets/logo.png)
 
 # What is ESCSS-SCSS?
 
@@ -23,24 +23,34 @@ Atomic CSS abstraction ensures optimal performance and consistent styling.
 
 ## Requirements
 
-sass >= 1.23.0
+version >= 1.23.0
 
 ## Usages
 
-### 1. Same utility names and behaviors as Tailwind
+### Set your project's breakpoints.
+
+```scss
+// _awaken.scss
+$_sm: 0px !default;
+$_md: 0px !default;
+$_lg: 0px !default;
+$_xl: 0px !default;
+$_xxl: 0px !default;
+```
+
+### Same utility names and behaviors as Tailwind
 
 - Support: basic utilities、media query、dark mode
-- Not Support(file size concern): all opacity colors(5、10..)、pseudo class(hover、before..)
 
-### 2. Type @include utils/experiments to show more API
+### Type @include utils/experiments to show more API
 
 - Instal 'SCSS IntelliSense' extension in VSCode
 
-### 3. @include utils_reset-tw in every id/class(Best Practice)
+### @include utils_reset-tw in every id/class(Best Practice)
 
 - to reset some tailwind behavior(be lazy)
 
-### 4. Transform from Tailwind to Sass:
+### Transform from Tailwind to Sass:
 
 ```
     tailwind       -->       scss
@@ -57,8 +67,8 @@ sass >= 1.23.0
 
 ```scss
 #Demo {
-  @include text-green-50\/65; // not support
-  @include text-green-50\/(0.65); // use arbitrary instead
+  @include text-green-50(65%);
+  @include text-green-50(0.65);
 
   @include utils_reset-tw;
 }
@@ -109,7 +119,7 @@ sass >= 1.23.0
 
 ### Why are the default values of breakpoints(sm、md..) set to 0px?
 
-1. Because of the features of CSS, each project has unique breakpoints, and it's relatively easy to trigger [AGPL-3.0, §13](https://www.gnu.org/licenses/agpl-3.0.en.html) obligations to open source.
+1. Each project has unique breakpoints, and it's relatively easy to trigger [AGPL-3.0, §13](https://www.gnu.org/licenses/agpl-3.0.en.html) obligations to open source, therefore set 0 as default.
 2. I think it's fair to earn money for my work.
 
 ### What is the benefit of using Atomic CSS?
@@ -120,7 +130,7 @@ sass >= 1.23.0
 
 ### Do you support backward compatibility?
 
-Yes, it is designed for backward compatibility from Sass v1.23.0 to the latest version. I adhere to Sass’s deprecation warnings to ensure smooth transitions. My goal is to help you move to the latest version if possible.
+Yes, it is designed in mind from Sass v1.23.0 to the latest version if. I adhere to Sass’s deprecation warnings to ensure smooth transitions.
 
 ### Are you a Tailwind killer?
 

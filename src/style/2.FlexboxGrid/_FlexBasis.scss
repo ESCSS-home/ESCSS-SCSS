@@ -1,4 +1,4 @@
-$FlexBasis: (
+$data: (
   '0': '$_0',
   'px': '$_px',
   '0\\.5': '$_0\\.5',
@@ -65,7 +65,7 @@ $FlexBasis: (
 );
 
 @if $isBasic {
-  @each $key, $value in $FlexBasis {
+  @each $key, $value in $data {
     /*x
     @mixin basis-#{$key} {
       @include flex-basis(#{$value});
@@ -74,9 +74,9 @@ $FlexBasis: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $FlexBasis {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:basis-#{$key} {
         @include flex-basis(#{$value}, #{$rwd});

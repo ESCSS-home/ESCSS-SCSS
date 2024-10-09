@@ -1,4 +1,4 @@
-$GridAutoColumns: (
+$data: (
   'auto-cols-auto': auto,
   'auto-cols-min': min-content,
   'auto-cols-max': max-content,
@@ -6,7 +6,7 @@ $GridAutoColumns: (
 );
 
 @if $isBasic {
-  @each $key, $value in $GridAutoColumns {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include grid-auto-columns(#{$value});
@@ -15,9 +15,9 @@ $GridAutoColumns: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $GridAutoColumns {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include grid-auto-columns(#{$value}, #{$rwd});

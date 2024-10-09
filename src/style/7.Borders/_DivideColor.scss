@@ -1,4 +1,4 @@
-$DivideColor: (
+$data: (
   'name-50': '$_name-50',
   'name-100': '$_name-100',
   'name-200': '$_name-200',
@@ -293,7 +293,7 @@ $DivideColor: (
     }
   }
   x*/
-  @each $key, $value in $DivideColor {
+  @each $key, $value in $data {
     @if $isAwaken {
       /*x
       @mixin divide-#{$key}($v: 1) {
@@ -320,7 +320,7 @@ $DivideColor: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
     /*x
     @mixin #{$rwdToken}\:divide-inherit {
@@ -335,7 +335,7 @@ $DivideColor: (
       }
     }
     x*/
-    @each $key, $value in $DivideColor {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:divide-#{$key} {
         > * ~ * {  

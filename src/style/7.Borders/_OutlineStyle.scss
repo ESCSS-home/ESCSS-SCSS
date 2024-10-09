@@ -1,7 +1,7 @@
-// 1st: outline
-// 2nd: outline-offset
-// 3rd: outline-style
-$OutlineStyle: (
+// 1st property: outline
+// 2nd property: outline-offset
+// 3rd property: outline-style
+$data: (
   'outline-none': (
     (2px solid transparent),
     2px,
@@ -30,7 +30,7 @@ $OutlineStyle: (
 );
 
 @if $isBasic {
-  @each $key, $value in $OutlineStyle {
+  @each $key, $value in $data {
     // atomic handle outline
     @if $key != 'outline' {
       /*x
@@ -44,9 +44,9 @@ $OutlineStyle: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $OutlineStyle {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include #{$rwdToken} {

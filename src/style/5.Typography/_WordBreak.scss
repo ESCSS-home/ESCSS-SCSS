@@ -1,6 +1,6 @@
-// 1st: overflow-wrap
-// 2nd: word-break
-$WordBreak: (
+// 1st property: overflow-wrap
+// 2nd property: word-break
+$data: (
   'break-normal': (
     normal,
     normal,
@@ -20,7 +20,7 @@ $WordBreak: (
 );
 
 @if $isBasic {
-  @each $key, $value in $WordBreak {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include overflow-wrap(#{list.nth($value, 1)});
@@ -30,9 +30,9 @@ $WordBreak: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $WordBreak {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include #{$rwdToken} {

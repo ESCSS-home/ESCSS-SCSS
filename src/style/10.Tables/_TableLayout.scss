@@ -1,10 +1,10 @@
-$TableLayout: (
+$data: (
   'table-auto': auto,
   'table-fixed': fixed,
 );
 
 @if $isBasic {
-  @each $key, $value in $TableLayout {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include table-layout(#{$value});
@@ -13,9 +13,9 @@ $TableLayout: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $TableLayout {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include table-layout(#{$value}, #{$rwd});

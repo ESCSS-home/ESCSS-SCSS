@@ -1,6 +1,16 @@
 ## file structure
 
-![file structure](./assets/file-structure.png)
+style/test
+├── 1.Layout  
+│ ├── AspectRatio.scss  
+│ ├── BoxDecorationBreak.scss  
+│ ├── BoxSizing.scss  
+│ ├── usage.md  
+│ └── ...  
+├── 2.FlexboxGrid
+└── ...
+
+[Same as Tailwind web](https://tailwindcss.com/docs/aspect-ratio)
 
 ### style file - generate SCSS file
 

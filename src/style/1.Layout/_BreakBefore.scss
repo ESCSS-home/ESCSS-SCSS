@@ -1,4 +1,4 @@
-$BreakBefore: (
+$data: (
   'break-before-auto': auto,
   'break-before-avoid': avoid,
   'break-before-all': all,
@@ -10,7 +10,7 @@ $BreakBefore: (
 );
 
 @if $isBasic {
-  @each $key, $value in $BreakBefore {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include break-before(#{$value});
@@ -19,9 +19,9 @@ $BreakBefore: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $BreakBefore {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include break-before(#{$value}, #{$rwd});

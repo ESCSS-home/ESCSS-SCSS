@@ -1,4 +1,4 @@
-$JustifySelf: (
+$data: (
   'justify-self-auto': auto,
   'justify-self-start': start,
   'justify-self-end': end,
@@ -7,7 +7,7 @@ $JustifySelf: (
 );
 
 @if $isBasic {
-  @each $key, $value in $JustifySelf {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include justify-self(#{$value});
@@ -16,9 +16,9 @@ $JustifySelf: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $JustifySelf {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include justify-self(#{$value}, #{$rwd});

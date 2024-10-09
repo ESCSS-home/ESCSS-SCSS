@@ -1,4 +1,4 @@
-$BackdropHueRotate: (
+$data: (
   'backdrop-hue-rotate-0': 0deg,
   'backdrop-hue-rotate-15': 15deg,
   'backdrop-hue-rotate-30': 30deg,
@@ -8,7 +8,7 @@ $BackdropHueRotate: (
 );
 
 @if $isBasic {
-  @each $key, $value in $BackdropHueRotate {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       $tw-backdrop-hue-rotate: hue-rotate(#{$value}) !global;
@@ -18,9 +18,9 @@ $BackdropHueRotate: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $BackdropHueRotate {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         $tw-backdrop-hue-rotate: hue-rotate(#{$value}) !global;
@@ -49,7 +49,7 @@ $BackdropHueRotate: (
 
 @if $isNegative {
   @if $isBasic {
-    @each $key, $value in $BackdropHueRotate {
+    @each $key, $value in $data {
       /*x
       @mixin -#{$key} {
         $tw-backdrop-hue-rotate: hue-rotate(-#{$value}) !global;
@@ -59,9 +59,9 @@ $BackdropHueRotate: (
     }
   }
 
-  @if $isRwd and (not $isAwaken) {
+  @if $isResponsive and (not $isAwaken) {
     @each $rwdToken, $rwd in $rwdBox {
-      @each $key, $value in $BackdropHueRotate {
+      @each $key, $value in $data {
         /*x
         @mixin #{$rwdToken}\:-#{$key} {
           $tw-backdrop-hue-rotate: hue-rotate(-#{$value}) !global;

@@ -1,4 +1,4 @@
-$Flex: (
+$data: (
   'flex-1': 1 1 0%,
   'flex-auto': 1 1 auto,
   'flex-initial': 0 1 auto,
@@ -6,7 +6,7 @@ $Flex: (
 );
 
 @if $isBasic {
-  @each $key, $value in $Flex {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include flex(#{$value});
@@ -15,9 +15,9 @@ $Flex: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $Flex {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include flex(#{$value}, #{$rwd});

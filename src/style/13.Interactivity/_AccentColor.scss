@@ -1,4 +1,4 @@
-$AccentColor: (
+$data: (
   'name-50': '$_name-50',
   'name-100': '$_name-100',
   'name-200': '$_name-200',
@@ -293,7 +293,7 @@ $AccentColor: (
     @include accent-color(currentColor);
   }
   x*/
-  @each $key, $value in $AccentColor {
+  @each $key, $value in $data {
     @if $isAwaken {
       /*x
       @mixin accent-#{$key}($v: 1) {
@@ -314,7 +314,7 @@ $AccentColor: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
     /*x
       @mixin #{$rwdToken}\:accent-auto {
@@ -329,7 +329,7 @@ $AccentColor: (
       @include accent-color(currentColor, #{$rwd});
     }
     x*/
-    @each $key, $value in $AccentColor {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:accent-#{$key} {
         @include accent-color(#{$value}, #{$rwd});

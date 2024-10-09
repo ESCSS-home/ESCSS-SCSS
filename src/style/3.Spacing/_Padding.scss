@@ -1,4 +1,4 @@
-$Padding: (
+$data: (
   '0': '$_0',
   'px': '$_px',
   '0\\.5': '$_0\\.5',
@@ -37,7 +37,7 @@ $Padding: (
 );
 
 @if $isBasic {
-  @each $key, $value in $Padding {
+  @each $key, $value in $data {
     /*x
     @mixin p-#{$key} {
       @include padding(#{$value});
@@ -80,9 +80,9 @@ $Padding: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $Padding {
+    @each $key, $value in $data {
       /*x
     @mixin #{$rwdToken}\:p-#{$key} {
       @include padding(#{$value}, #{$rwd});

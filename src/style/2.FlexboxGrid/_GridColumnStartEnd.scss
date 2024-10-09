@@ -1,4 +1,4 @@
-$group-GridColumnStartEnd: (
+$group-data: (
   'col-auto': auto,
   'col-span-1': span 1 / span 1,
   'col-span-2': span 2 / span 2,
@@ -15,7 +15,7 @@ $group-GridColumnStartEnd: (
   'col-span-full': '#/*x{1 / -1}',
 );
 
-$group-GridColumnStartEnd-start: (
+$data-start: (
   'col-start-1': 1,
   'col-start-2': 2,
   'col-start-3': 3,
@@ -32,7 +32,7 @@ $group-GridColumnStartEnd-start: (
   'col-start-auto': auto,
 );
 
-$group-GridColumnStartEnd-end: (
+$data-end: (
   'col-end-1': 1,
   'col-end-2': 2,
   'col-end-3': 3,
@@ -50,7 +50,7 @@ $group-GridColumnStartEnd-end: (
 );
 
 @if $isBasic {
-  @each $key, $value in $group-GridColumnStartEnd {
+  @each $key, $value in $group-data {
     /*x
     @mixin #{$key} {
       @include grid-column(#{$value});
@@ -58,7 +58,7 @@ $group-GridColumnStartEnd-end: (
     x*/
   }
 
-  @each $key, $value in $group-GridColumnStartEnd-start {
+  @each $key, $value in $data-start {
     /*x
     @mixin #{$key} {
       @include grid-column-start(#{$value});
@@ -66,7 +66,7 @@ $group-GridColumnStartEnd-end: (
     x*/
   }
 
-  @each $key, $value in $group-GridColumnStartEnd-end {
+  @each $key, $value in $data-end {
     /*x
     @mixin #{$key} {
       @include grid-column-end(#{$value});
@@ -75,9 +75,9 @@ $group-GridColumnStartEnd-end: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $group-GridColumnStartEnd {
+    @each $key, $value in $group-data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include grid-column(#{$value}, #{$rwd});
@@ -85,7 +85,7 @@ $group-GridColumnStartEnd-end: (
       x*/
     }
 
-    @each $key, $value in $group-GridColumnStartEnd-start {
+    @each $key, $value in $data-start {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include grid-column-start(#{$value}, #{$rwd});
@@ -93,7 +93,7 @@ $group-GridColumnStartEnd-end: (
       x*/
     }
 
-    @each $key, $value in $group-GridColumnStartEnd-end {
+    @each $key, $value in $data-end {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include grid-column-end(#{$value}, #{$rwd});

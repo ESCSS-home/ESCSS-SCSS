@@ -1,4 +1,4 @@
-$Float: (
+$data: (
   'float-start': inline-start,
   'float-end': inline-end,
   'float-right': right,
@@ -7,7 +7,7 @@ $Float: (
 );
 
 @if $isBasic {
-  @each $key, $value in $Float {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include float(#{$value});
@@ -16,9 +16,9 @@ $Float: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $Float {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include float(#{$value}, #{$rwd});

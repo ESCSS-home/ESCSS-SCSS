@@ -1,4 +1,4 @@
-$BackgroundsClip: (
+$data: (
   'bg-clip-border': border-box,
   'bg-clip-padding': padding-box,
   'bg-clip-content': content-box,
@@ -6,7 +6,7 @@ $BackgroundsClip: (
 );
 
 @if $isBasic {
-  @each $key, $value in $BackgroundsClip {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key}{
       @include background-clip(#{$value});
@@ -15,9 +15,9 @@ $BackgroundsClip: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $BackgroundsClip {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key}{
         @include background-clip(#{$value}, #{$rwd});

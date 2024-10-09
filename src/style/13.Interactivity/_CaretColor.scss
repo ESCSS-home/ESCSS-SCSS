@@ -1,4 +1,4 @@
-$CaretColor: (
+$data: (
   'name-50': '$_name-50',
   'name-100': '$_name-100',
   'name-200': '$_name-200',
@@ -289,7 +289,7 @@ $CaretColor: (
     @include caret-color(currentColor);
   }
   x*/
-  @each $key, $value in $CaretColor {
+  @each $key, $value in $data {
     @if $isAwaken {
       /*x
       @mixin caret-#{$key}($v: 1) {
@@ -310,7 +310,7 @@ $CaretColor: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
     /*x
     @mixin #{$rwdToken}\:caret-inherit {
@@ -321,7 +321,7 @@ $CaretColor: (
       @include caret-color(currentColor, #{$rwd});
     }
     x*/
-    @each $key, $value in $CaretColor {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:caret-#{$key} {
         @include caret-color(#{$value}, #{$rwd});

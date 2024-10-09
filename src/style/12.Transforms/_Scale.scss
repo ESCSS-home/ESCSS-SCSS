@@ -1,4 +1,4 @@
-$Scale: (
+$data: (
   '0': 0,
   '50': 0.5,
   '75': 0.75,
@@ -12,7 +12,7 @@ $Scale: (
 );
 
 @if $isBasic {
-  @each $key, $value in $Scale {
+  @each $key, $value in $data {
     /*x
     @mixin scale-#{$key} {
       $tw-scale-x: #{$value} !global;
@@ -33,9 +33,9 @@ $Scale: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $Scale {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:scale-#{$key} {
         $tw-scale-x: #{$value} !global;
@@ -97,7 +97,7 @@ $Scale: (
 
 @if $isNegative {
   @if $isBasic {
-    @each $key, $value in $Scale {
+    @each $key, $value in $data {
       /*x
       @mixin -scale-#{$key} {
         $tw-scale-x: #{-$value} !global;
@@ -118,9 +118,9 @@ $Scale: (
     }
   }
 
-  @if $isRwd and (not $isAwaken) {
+  @if $isResponsive and (not $isAwaken) {
     @each $rwdToken, $rwd in $rwdBox {
-      @each $key, $value in $Scale {
+      @each $key, $value in $data {
         /*x
         @mixin #{$rwdToken}\:-scale-#{$key} {
           $tw-scale-x: #{-$value} !global;

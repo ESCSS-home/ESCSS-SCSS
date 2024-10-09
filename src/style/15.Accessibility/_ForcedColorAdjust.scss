@@ -1,10 +1,10 @@
-$ForcedColorAdjust: (
+$data: (
   'forced-color-adjust-auto': auto,
   'forced-color-adjust-none': none,
 );
 
 @if $isBasic {
-  @each $key, $value in $ForcedColorAdjust {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include forced-color-adjust(#{$value});
@@ -13,9 +13,9 @@ $ForcedColorAdjust: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $ForcedColorAdjust {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include forced-color-adjust(#{$value}, #{$rwd});

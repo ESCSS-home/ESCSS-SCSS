@@ -1,4 +1,4 @@
-$WillChange: (
+$data: (
   'will-change-auto': auto,
   'will-change-scroll': scroll-position,
   'will-change-contents': contents,
@@ -6,7 +6,7 @@ $WillChange: (
 );
 
 @if $isBasic {
-  @each $key, $value in $WillChange {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include will-change(#{$value});
@@ -15,9 +15,9 @@ $WillChange: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $WillChange {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include will-change(#{$value}, null, #{$rwd});

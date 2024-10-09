@@ -1,8 +1,8 @@
-// 1st: overflow
-// 2nd: display
-// 3rd: -webkit-box-orient
-// 4th: -webkit-line-clamp
-$LineClamp: (
+// 1st property: overflow
+// 2nd property: display
+// 3rd property: -webkit-box-orient
+// 4th property: -webkit-line-clamp
+$data: (
   'line-clamp-1': (
     hidden,
     -webkit-box,
@@ -48,7 +48,7 @@ $LineClamp: (
 );
 
 @if $isBasic {
-  @each $key, $value in $LineClamp {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include overflow(#{list.nth($value, 1)});
@@ -60,9 +60,9 @@ $LineClamp: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $LineClamp {
+    @each $key, $value in $data {
       /*x
     @mixin #{$rwdToken}\:#{$key} {
       @include #{$rwdToken} {

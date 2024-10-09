@@ -1,10 +1,10 @@
-$FontStyle: (
+$data: (
   'italic': italic,
   'not-italic': normal,
 );
 
 @if $isBasic {
-  @each $key, $value in $FontStyle {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include font-style(#{$value});
@@ -13,9 +13,9 @@ $FontStyle: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $FontStyle {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include font-style(#{$value}, #{$rwd});

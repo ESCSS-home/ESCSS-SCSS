@@ -1,5 +1,5 @@
-// arbitrary same as @mixin text-($v)
-$FontSize: (
+// arbitrary utility same as @mixin text-($v)
+$data: (
   'text-xs': (
     '$_font-size_xs',
     '$_line-height_xs',
@@ -55,7 +55,7 @@ $FontSize: (
 );
 
 @if $isBasic {
-  @each $key, $value in $FontSize {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include font-size(#{list.nth($value, 1)});
@@ -149,9 +149,9 @@ $FontSize: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $FontSize {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include #{$rwdToken} {

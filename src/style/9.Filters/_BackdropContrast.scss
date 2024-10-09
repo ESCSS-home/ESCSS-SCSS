@@ -1,4 +1,4 @@
-$BackdropContrast: (
+$data: (
   'backdrop-contrast-0': contrast(0),
   'backdrop-contrast-50': contrast(0.5),
   'backdrop-contrast-75': contrast(0.75),
@@ -9,7 +9,7 @@ $BackdropContrast: (
 );
 
 @if $isBasic {
-  @each $key, $value in $BackdropContrast {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       $tw-backdrop-contrast: #{$value} !global;
@@ -19,9 +19,9 @@ $BackdropContrast: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $BackdropContrast {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         $tw-backdrop-contrast: #{$value} !global;

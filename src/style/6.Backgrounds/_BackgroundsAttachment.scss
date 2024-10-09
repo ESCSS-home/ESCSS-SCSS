@@ -1,11 +1,11 @@
-$BackgroundsAttachment: (
+$data: (
   'bg-fixed': fixed,
   'bg-local': local,
   'bg-scroll': scroll,
 );
 
 @if $isBasic {
-  @each $key, $value in $BackgroundsAttachment {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key}{
       @include background-attachment(#{$value});
@@ -14,9 +14,9 @@ $BackgroundsAttachment: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $BackgroundsAttachment {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key}{
         @include background-attachment(#{$value}, #{$rwd});

@@ -1,10 +1,10 @@
-$Appearance: (
+$data: (
   'appearance-none': none,
   'appearance-auto': auto,
 );
 
 @if $isBasic {
-  @each $key, $value in $Appearance {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include appearance(#{$value});
@@ -13,9 +13,9 @@ $Appearance: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $Appearance {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include appearance(#{$value}, #{$rwd});

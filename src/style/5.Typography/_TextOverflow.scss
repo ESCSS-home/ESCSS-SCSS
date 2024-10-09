@@ -1,7 +1,7 @@
-// 1st: overflow
-// 2nd: text-overflow
-// 3rd: white-space
-$TextOverflow: (
+// 1st property: overflow
+// 2nd property: text-overflow
+// 3rd property: white-space
+$data: (
   'truncate': (
     hidden,
     ellipsis,
@@ -20,7 +20,7 @@ $TextOverflow: (
 );
 
 @if $isBasic {
-  @each $key, $value in $TextOverflow {
+  @each $key, $value in $data {
     /*x 
     @mixin #{$key} {
       @include overflow(#{list.nth($value, 1)});
@@ -31,9 +31,9 @@ $TextOverflow: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $TextOverflow {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include #{$rwdToken} {

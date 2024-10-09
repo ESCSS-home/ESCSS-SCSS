@@ -1,4 +1,4 @@
-$BackdropBlur: (
+$data: (
   'backdrop-blur-none': blur(0),
   'backdrop-blur-sm': blur(4px),
   'backdrop-blur': blur(8px),
@@ -10,7 +10,7 @@ $BackdropBlur: (
 );
 
 @if $isBasic {
-  @each $key, $value in $BackdropBlur {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       $tw-backdrop-blur: #{$value} !global;
@@ -20,9 +20,9 @@ $BackdropBlur: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $BackdropBlur {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         $tw-backdrop-blur: #{$value} !global;

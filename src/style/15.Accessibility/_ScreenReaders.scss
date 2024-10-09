@@ -1,13 +1,13 @@
-// 1st: position
-// 2nd: width
-// 3rd: height
-// 4th: padding
-// 5th: margin
-// 6th: overflow
-// 7th: clip
-// 8th: white-space
-// 9th: border-width
-$ScreenReaders: (
+// 1st property: position
+// 2nd property: width
+// 3rd property: height
+// 4th property: padding
+// 5th property: margin
+// 6th property: overflow
+// 7th property: clip
+// 8th property: white-space
+// 9th property: border-width
+$data: (
   'sr-only': (
     absolute,
     1px,
@@ -33,7 +33,7 @@ $ScreenReaders: (
 );
 
 @if $isBasic {
-  @each $key, $value in $ScreenReaders {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include position(#{list.nth($value, 1)});
@@ -50,9 +50,9 @@ $ScreenReaders: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $ScreenReaders {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include #{$rwdToken} {

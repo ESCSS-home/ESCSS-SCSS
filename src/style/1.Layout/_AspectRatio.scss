@@ -1,11 +1,11 @@
-$AspectRatio: (
+$data: (
   'aspect-auto': auto,
   'aspect-square': '#/*x{1 / 1}',
   'aspect-video': '#/*x{16 / 9}',
 );
 
 @if $isBasic {
-  @each $key, $value in $AspectRatio {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include aspect-ratio(#{$value});
@@ -14,9 +14,9 @@ $AspectRatio: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $AspectRatio {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include aspect-ratio(#{$value}, #{$rwd});

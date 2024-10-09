@@ -1,4 +1,4 @@
-$AlignContent: (
+$data: (
   'content-normal': normal,
   'content-center': center,
   'content-start': flex-start,
@@ -11,7 +11,7 @@ $AlignContent: (
 );
 
 @if $isBasic {
-  @each $key, $value in $AlignContent {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include align-content(#{$value});
@@ -20,9 +20,9 @@ $AlignContent: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $AlignContent {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include align-content(#{$value}, #{$rwd});

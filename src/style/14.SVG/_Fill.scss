@@ -1,4 +1,4 @@
-$Fill: (
+$data: (
   'name-50': '$_name-50',
   'name-100': '$_name-100',
   'name-200': '$_name-200',
@@ -293,7 +293,7 @@ $Fill: (
     @include fill(currentColor);
   }
   x*/
-  @each $key, $value in $Fill {
+  @each $key, $value in $data {
     @if $isAwaken {
       /*x
       @mixin fill-#{$key}($v: 1) {
@@ -314,7 +314,7 @@ $Fill: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
     /*x
       @mixin #{$rwdToken}\:fill-none {
@@ -329,7 +329,7 @@ $Fill: (
       @include fill(currentColor, #{$rwd});
     }
     x*/
-    @each $key, $value in $Fill {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:fill-#{$key} {
         @include fill(#{$value}, #{$rwd});

@@ -1,4 +1,4 @@
-$RingOffsetColor: (
+$data: (
   'name-50': '$_name-50',
   'name-100': '$_name-100',
   'name-200': '$_name-200',
@@ -291,7 +291,7 @@ $RingOffsetColor: (
     @include box-shadow(_b-s());
   }
   x*/
-  @each $key, $value in $RingOffsetColor {
+  @each $key, $value in $data {
     @if $isAwaken {
       /*x
       @mixin ring-offset-#{$key}($v: 1) {
@@ -315,7 +315,7 @@ $RingOffsetColor: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
     /*x
     @mixin #{$rwdToken}\:ring-offset-inherit {
@@ -328,7 +328,7 @@ $RingOffsetColor: (
       @include box-shadow(_b-s(), #{$rwd});
     }
     x*/
-    @each $key, $value in $RingOffsetColor {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:ring-offset-#{$key} {
         $tw-ring-offset-color: #{$value} !global;

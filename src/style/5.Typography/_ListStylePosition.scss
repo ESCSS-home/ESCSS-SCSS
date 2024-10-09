@@ -1,10 +1,10 @@
-$ListStylePosition: (
+$data: (
   'list-inside': inside,
   'list-outside': outside,
 );
 
 @if $isBasic {
-  @each $key, $value in $ListStylePosition {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key}{
       @include list-style-position(#{$value});
@@ -13,9 +13,9 @@ $ListStylePosition: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $ListStylePosition {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key}{
         @include list-style-position(#{$value}, #{$rwd});

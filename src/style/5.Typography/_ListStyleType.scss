@@ -1,11 +1,11 @@
-$ListStyleType: (
+$data: (
   'list-none': none,
   'list-disc': disc,
   'list-decimal': decimal,
 );
 
 @if $isBasic {
-  @each $key, $value in $ListStyleType {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include list-style-type(#{$value});
@@ -14,9 +14,9 @@ $ListStyleType: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $ListStyleType {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include list-style-type(#{$value}, #{$rwd});

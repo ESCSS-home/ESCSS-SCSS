@@ -1,5 +1,5 @@
-// arbitrary same as  @mixin bg-($v)
-$BackgroundsPosition: (
+// arbitrary utility same as  @mixin bg-($v)
+$data: (
   'bg-bottom': bottom,
   'bg-center': center,
   'bg-left': left,
@@ -12,7 +12,7 @@ $BackgroundsPosition: (
 );
 
 @if $isBasic {
-  @each $key, $value in $BackgroundsPosition {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include background-position(#{$value});
@@ -21,9 +21,9 @@ $BackgroundsPosition: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $BackgroundsPosition {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include background-position(#{$value}, #{$rwd});

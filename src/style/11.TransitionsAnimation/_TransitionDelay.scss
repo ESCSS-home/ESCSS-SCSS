@@ -1,4 +1,4 @@
-$TransitionDelay: (
+$data: (
   'delay-0': 0s,
   'delay-75': 75ms,
   'delay-100': 100ms,
@@ -11,7 +11,7 @@ $TransitionDelay: (
 );
 
 @if $isBasic {
-  @each $key, $value in $TransitionDelay {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include transition-delay(#{$value});
@@ -20,9 +20,9 @@ $TransitionDelay: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $TransitionDelay {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include transition-delay(#{$value}, #{$rwd});

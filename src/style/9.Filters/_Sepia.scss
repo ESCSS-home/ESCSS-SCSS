@@ -1,10 +1,10 @@
-$Sepia: (
+$data: (
   'sepia-0': sepia(0),
   'sepia': sepia(100%),
 );
 
 @if $isBasic {
-  @each $key, $value in $Sepia {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       $tw-sepia: #{$value} !global;
@@ -14,9 +14,9 @@ $Sepia: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $Sepia {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         $tw-sepia: #{$value} !global;

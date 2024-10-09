@@ -1,4 +1,4 @@
-$Size: (
+$data: (
   'size-0': '$_0',
   'size-px': '$_px',
   'size-0\\.5': '$_0\\.5',
@@ -68,7 +68,7 @@ $Size: (
 );
 
 @if $isBasic {
-  @each $key, $value in $Size {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include width(#{$value});
@@ -78,9 +78,9 @@ $Size: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $Size {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include #{$rwdToken} {

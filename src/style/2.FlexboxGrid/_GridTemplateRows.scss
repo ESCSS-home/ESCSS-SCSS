@@ -1,4 +1,4 @@
-$GridTemplateRows: (
+$data: (
   'grid-rows-1': repeat(1, minmax(0, 1fr)),
   'grid-rows-2': repeat(2, minmax(0, 1fr)),
   'grid-rows-3': repeat(3, minmax(0, 1fr)),
@@ -16,7 +16,7 @@ $GridTemplateRows: (
 );
 
 @if $isBasic {
-  @each $key, $value in $GridTemplateRows {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include grid-template-rows(#{$value});
@@ -25,9 +25,9 @@ $GridTemplateRows: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $GridTemplateRows {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include grid-template-rows(#{$value}, #{$rwd});

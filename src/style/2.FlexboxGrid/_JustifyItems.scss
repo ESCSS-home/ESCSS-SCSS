@@ -1,4 +1,4 @@
-$JustifyItems: (
+$data: (
   'justify-items-start': start,
   'justify-items-end': end,
   'justify-items-center': center,
@@ -6,7 +6,7 @@ $JustifyItems: (
 );
 
 @if $isBasic {
-  @each $key, $value in $JustifyItems {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include justify-items(#{$value});
@@ -15,9 +15,9 @@ $JustifyItems: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $JustifyItems {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include justify-items(#{$value}, #{$rwd});

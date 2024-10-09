@@ -1,10 +1,10 @@
-$ScrollSnapStop: (
+$data: (
   'snap-normal': normal,
   'snap-always': always,
 );
 
 @if $isBasic {
-  @each $key, $value in $ScrollSnapStop {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include scroll-snap-stop(#{$value});
@@ -13,9 +13,9 @@ $ScrollSnapStop: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $ScrollSnapStop {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include scroll-snap-stop(#{$value}, #{$rwd});

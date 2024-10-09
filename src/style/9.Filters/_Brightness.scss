@@ -1,4 +1,4 @@
-$Brightness: (
+$data: (
   'brightness-0': brightness(0),
   'brightness-50': brightness(0.5),
   'brightness-75': brightness(0.75),
@@ -13,7 +13,7 @@ $Brightness: (
 );
 
 @if $isBasic {
-  @each $key, $value in $Brightness {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       $tw-brightness: #{$value} !global;
@@ -23,9 +23,9 @@ $Brightness: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $Brightness {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         $tw-brightness: #{$value} !global;

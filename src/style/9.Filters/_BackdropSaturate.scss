@@ -1,4 +1,4 @@
-$BackdropSaturate: (
+$data: (
   'backdrop-saturate-0': saturate(0),
   'backdrop-saturate-50': saturate(0.5),
   'backdrop-saturate-100': saturate(1),
@@ -7,7 +7,7 @@ $BackdropSaturate: (
 );
 
 @if $isBasic {
-  @each $key, $value in $BackdropSaturate {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       $tw-backdrop-saturate: #{$value} !global;
@@ -17,9 +17,9 @@ $BackdropSaturate: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $BackdropSaturate {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         $tw-backdrop-saturate: #{$value} !global;

@@ -1,4 +1,4 @@
-$Opacity: (
+$data: (
   'opacity-0': 0,
   'opacity-5': 0.05,
   'opacity-10': 0.1,
@@ -23,7 +23,7 @@ $Opacity: (
 );
 
 @if $isBasic {
-  @each $key, $value in $Opacity {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include opacity(#{$value});
@@ -32,9 +32,9 @@ $Opacity: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $Opacity {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include opacity(#{$value}, #{$rwd});

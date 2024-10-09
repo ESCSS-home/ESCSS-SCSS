@@ -1,10 +1,10 @@
-$Invert: (
+$data: (
   'invert-0': invert(0),
   'invert': invert(100%),
 );
 
 @if $isBasic {
-  @each $key, $value in $Invert {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       $tw-invert: #{$value} !global;
@@ -14,9 +14,9 @@ $Invert: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $Invert {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         $tw-invert: #{$value} !global;

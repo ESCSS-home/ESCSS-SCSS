@@ -1,4 +1,4 @@
-$AlignSelf: (
+$data: (
   'self-auto': auto,
   'self-start': flex-start,
   'self-end': flex-end,
@@ -8,7 +8,7 @@ $AlignSelf: (
 );
 
 @if $isBasic {
-  @each $key, $value in $AlignSelf {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include align-self(#{$value});
@@ -17,9 +17,9 @@ $AlignSelf: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $AlignSelf {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include align-self(#{$value}, #{$rwd});

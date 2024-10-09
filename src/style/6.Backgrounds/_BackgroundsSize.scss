@@ -1,12 +1,12 @@
-// arbitrary same as @mixin bg-($v)
-$BackgroundsSize: (
+// arbitrary utility same as @mixin bg-($v)
+$data: (
   'bg-auto': auto,
   'bg-cover': cover,
   'bg-contain': contain,
 );
 
 @if $isBasic {
-  @each $key, $value in $BackgroundsSize {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include background-size(#{$value});
@@ -15,9 +15,9 @@ $BackgroundsSize: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $BackgroundsSize {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include background-size(#{$value}, #{$rwd});

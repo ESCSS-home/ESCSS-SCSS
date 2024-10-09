@@ -1,4 +1,4 @@
-$BackdropOpacity: (
+$data: (
   'backdrop-opacity-0': opacity(0),
   'backdrop-opacity-5': opacity(0.05),
   'backdrop-opacity-10': opacity(0.1),
@@ -23,7 +23,7 @@ $BackdropOpacity: (
 );
 
 @if $isBasic {
-  @each $key, $value in $BackdropOpacity {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       $tw-backdrop-opacity: #{$value} !global;
@@ -33,9 +33,9 @@ $BackdropOpacity: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $BackdropOpacity {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         $tw-backdrop-opacity: #{$value} !global;

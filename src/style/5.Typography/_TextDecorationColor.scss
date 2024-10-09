@@ -1,4 +1,4 @@
-$TextDecorationColor: (
+$data: (
   'name-50': '$_name-50',
   'name-100': '$_name-100',
   'name-200': '$_name-200',
@@ -289,7 +289,7 @@ $TextDecorationColor: (
     @include text-decoration-color(currentColor);
   }
   x*/
-  @each $key, $value in $TextDecorationColor {
+  @each $key, $value in $data {
     @if $isAwaken {
       /*x
       @mixin decoration-#{$key}($v: 1) {
@@ -310,7 +310,7 @@ $TextDecorationColor: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
     /*x
     @mixin #{$rwdToken}\:decoration-inherit {
@@ -321,7 +321,7 @@ $TextDecorationColor: (
       @include text-decoration-color(currentColor, #{$rwd});
     }
     x*/
-    @each $key, $value in $TextDecorationColor {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:decoration-#{$key} {
         @include text-decoration-color(#{$value}, #{$rwd});

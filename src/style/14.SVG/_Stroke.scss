@@ -1,4 +1,4 @@
-$Stroke: (
+$data: (
   'name-50': '$_name-50',
   'name-100': '$_name-100',
   'name-200': '$_name-200',
@@ -293,7 +293,7 @@ $Stroke: (
     @include stroke(currentColor);
   }
   x*/
-  @each $key, $value in $Stroke {
+  @each $key, $value in $data {
     @if $isAwaken {
       /*x
       @mixin stroke-#{$key}($v: 1) {
@@ -314,7 +314,7 @@ $Stroke: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
     /*x
       @mixin #{$rwdToken}\:stroke-none {
@@ -329,7 +329,7 @@ $Stroke: (
       @include stroke(currentColor, #{$rwd});
     }
     x*/
-    @each $key, $value in $Stroke {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:stroke-#{$key} {
         @include stroke(#{$value}, #{$rwd});

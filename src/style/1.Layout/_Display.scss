@@ -1,4 +1,4 @@
-$Display: (
+$data: (
   'flex': flex,
   'block': block,
   'inline-block': inline-block,
@@ -23,7 +23,7 @@ $Display: (
 );
 
 @if $isBasic {
-  @each $key, $value in $Display {
+  @each $key, $value in $data {
     // atomic handle flex
     @if $key != 'flex' {
       /*x
@@ -35,9 +35,9 @@ $Display: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $Display {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include display(#{$value}, #{$rwd});

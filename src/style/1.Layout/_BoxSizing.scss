@@ -1,10 +1,10 @@
-$BoxSizing: (
+$data: (
   'box-border': border-box,
   'box-content': content-box,
 );
 
 @if $isBasic {
-  @each $key, $value in $BoxSizing {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include box-sizing(#{$value});
@@ -13,9 +13,9 @@ $BoxSizing: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $BoxSizing {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include box-sizing(#{$value}, #{$rwd});

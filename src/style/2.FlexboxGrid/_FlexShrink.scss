@@ -1,10 +1,10 @@
-$FlexShrink: (
+$data: (
   'shrink': 1,
   'shrink-0': 0,
 );
 
 @if $isBasic {
-  @each $key, $value in $FlexShrink {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include flex-shrink(#{$value});
@@ -13,9 +13,9 @@ $FlexShrink: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $FlexShrink {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include flex-shrink(#{$value}, #{$rwd});

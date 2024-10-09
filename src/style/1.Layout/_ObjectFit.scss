@@ -1,4 +1,4 @@
-$ObjectFit: (
+$data: (
   'object-contain': contain,
   'object-cover': cover,
   'object-fill': fill,
@@ -7,7 +7,7 @@ $ObjectFit: (
 );
 
 @if $isBasic {
-  @each $key, $value in $ObjectFit {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include object-fit(#{$value});
@@ -16,9 +16,9 @@ $ObjectFit: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $ObjectFit {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include object-fit(#{$value}, #{$rwd});

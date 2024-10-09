@@ -1,4 +1,4 @@
-$Container: (
+$data: (
   'container': (
     '100%',
     '$_sm',
@@ -10,7 +10,7 @@ $Container: (
 );
 
 @if $isBasic {
-  @each $key, $value in $Container {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include width(#{list.nth($value, 1)});
@@ -25,9 +25,9 @@ $Container: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $Container {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include #{$rwdToken} {

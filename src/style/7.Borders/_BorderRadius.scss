@@ -1,4 +1,4 @@
-$BorderRadius: (
+$data: (
   '-none': 0px,
   '-sm': '$_rounded-sm',
   null: '$_rounded',
@@ -11,7 +11,7 @@ $BorderRadius: (
 );
 
 @if $isBasic {
-  @each $key, $value in $BorderRadius {
+  @each $key, $value in $data {
     /*x
     @mixin rounded#{$key} {
       @include border-radius(#{$value});
@@ -82,9 +82,9 @@ $BorderRadius: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $BorderRadius {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:rounded#{$key} {
         @include border-radius(#{$value}, #{$rwd});

@@ -1,4 +1,4 @@
-$group-Overflow: (
+$data: (
   'overflow-auto': auto,
   'overflow-hidden': hidden,
   'overflow-clip': clip,
@@ -6,7 +6,7 @@ $group-Overflow: (
   'overflow-scroll': scroll,
 );
 
-$group-Overflow-x: (
+$data-x: (
   'overflow-x-auto': auto,
   'overflow-x-hidden': hidden,
   'overflow-x-clip': clip,
@@ -14,7 +14,7 @@ $group-Overflow-x: (
   'overflow-x-scroll': scroll,
 );
 
-$group-Overflow-y: (
+$data-y: (
   'overflow-y-auto': auto,
   'overflow-y-hidden': hidden,
   'overflow-y-clip': clip,
@@ -23,7 +23,7 @@ $group-Overflow-y: (
 );
 
 @if $isBasic {
-  @each $key, $value in $group-Overflow {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include overflow(#{$value});
@@ -31,7 +31,7 @@ $group-Overflow-y: (
     x*/
   }
 
-  @each $key, $value in $group-Overflow-x {
+  @each $key, $value in $data-x {
     /*x
     @mixin #{$key} {
       @include overflow-x(#{$value});
@@ -39,7 +39,7 @@ $group-Overflow-y: (
     x*/
   }
 
-  @each $key, $value in $group-Overflow-y {
+  @each $key, $value in $data-y {
     /*x
     @mixin #{$key} {
       @include overflow-y(#{$value});
@@ -48,9 +48,9 @@ $group-Overflow-y: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $group-Overflow {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include overflow(#{$value}, #{$rwd});
@@ -58,7 +58,7 @@ $group-Overflow-y: (
       x*/
     }
 
-    @each $key, $value in $group-Overflow-x {
+    @each $key, $value in $data-x {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include overflow-x(#{$value}, #{$rwd});
@@ -66,7 +66,7 @@ $group-Overflow-y: (
       x*/
     }
 
-    @each $key, $value in $group-Overflow-y {
+    @each $key, $value in $data-y {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include overflow-y(#{$value}, #{$rwd});

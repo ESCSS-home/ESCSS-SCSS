@@ -1,4 +1,4 @@
-$ScrollSnapType: (
+$data: (
   'snap-none': none,
   'snap-x': x '$tw-scroll-snap-strictness',
   'snap-y': y '$tw-scroll-snap-strictness',
@@ -8,7 +8,7 @@ $ScrollSnapType: (
 );
 
 @if $isBasic {
-  @each $key, $value in $ScrollSnapType {
+  @each $key, $value in $data {
     @if list.index('snap-none', $key) {
       /*x
       @mixin #{$key} {
@@ -36,9 +36,9 @@ $ScrollSnapType: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $ScrollSnapType {
+    @each $key, $value in $data {
       @if list.index('snap-none', $key) {
         /*x
         @mixin #{$rwdToken}\:#{$key} {

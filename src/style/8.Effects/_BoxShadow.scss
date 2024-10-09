@@ -1,9 +1,9 @@
-// arbitrary same as @mixin shadow-($v)
+// arbitrary utility same as @mixin shadow-($v)
 
-// 1st: $tw-dummy-shadow-token
-// 2nd: $tw-dummy-shadow-width
-// 3rd: $tw-shadow-color
-$BoxShadow: (
+// 1st property: $tw-dummy-shadow-token
+// 2nd property: $tw-dummy-shadow-width
+// 3rd property: $tw-shadow-color
+$data: (
   'shadow-sm': (
     sm,
     (0 1px 2px 0, null),
@@ -47,7 +47,7 @@ $BoxShadow: (
 );
 
 @if $isBasic {
-  @each $key, $value in $BoxShadow {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       $tw-dummy-shadow-token: #{list.nth($value, 1)} !global;
@@ -60,9 +60,9 @@ $BoxShadow: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $BoxShadow {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include #{$rwdToken} {

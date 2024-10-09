@@ -1,10 +1,10 @@
-$FlexGrow: (
+$data: (
   'grow': 1,
   'grow-0': 0,
 );
 
 @if $isBasic {
-  @each $key, $value in $FlexGrow {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include flex-grow(#{$value});
@@ -13,9 +13,9 @@ $FlexGrow: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $FlexGrow {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include flex-grow(#{$value}, #{$rwd});

@@ -1,4 +1,4 @@
-$BreakInside: (
+$data: (
   'break-inside-auto': auto,
   'break-inside-avoid': avoid,
   'break-inside-avoid-page': avoid-page,
@@ -6,7 +6,7 @@ $BreakInside: (
 );
 
 @if $isBasic {
-  @each $key, $value in $BreakInside {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include break-inside(#{$value});
@@ -15,9 +15,9 @@ $BreakInside: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $BreakInside {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include break-inside(#{$value}, #{$rwd});

@@ -1,10 +1,10 @@
-$CaptionSide: (
+$data: (
   'caption-top': top,
   'caption-bottom': bottom,
 );
 
 @if $isBasic {
-  @each $key, $value in $CaptionSide {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include caption-side(#{$value});
@@ -13,9 +13,9 @@ $CaptionSide: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $CaptionSide {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include caption-side(#{$value}, #{$rwd});

@@ -1,4 +1,4 @@
-$ScrollPadding: (
+$data: (
   '0': '$_0',
   'px': '$_px',
   '0\\.5': '$_0\\.5',
@@ -37,7 +37,7 @@ $ScrollPadding: (
 );
 
 @if $isBasic {
-  @each $key, $value in $ScrollPadding {
+  @each $key, $value in $data {
     /*x
     @mixin scroll-p-#{$key} {
       @include scroll-padding( #{$value});
@@ -80,9 +80,9 @@ $ScrollPadding: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $ScrollPadding {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:scroll-p-#{$key} {
         @include scroll-padding( #{$value}, #{$rwd});

@@ -1,4 +1,4 @@
-$MixBlendMode: (
+$data: (
   'mix-blend-normal': normal,
   'mix-blend-multiply': multiply,
   'mix-blend-screen': screen,
@@ -20,7 +20,7 @@ $MixBlendMode: (
 );
 
 @if $isBasic {
-  @each $key, $value in $MixBlendMode {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key}{
       @include mix-blend-mode(#{$value});
@@ -29,9 +29,9 @@ $MixBlendMode: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $MixBlendMode {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key}{
         @include mix-blend-mode(#{$value}, #{$rwd});

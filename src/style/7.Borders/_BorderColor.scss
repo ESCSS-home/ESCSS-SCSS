@@ -1,4 +1,4 @@
-$BorderColor: (
+$data: (
   'name-50': '$_name-50',
   'name-100': '$_name-100',
   'name-200': '$_name-200',
@@ -289,7 +289,7 @@ $BorderColor: (
     @include border-color(currentColor);
   }
   x*/
-  @each $key, $value in $BorderColor {
+  @each $key, $value in $data {
     @if $isAwaken {
       /*x
       @mixin border-#{$key}($v: 1) {
@@ -310,7 +310,7 @@ $BorderColor: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
     /*x
     @mixin #{$rwdToken}\:border-inherit {
@@ -321,7 +321,7 @@ $BorderColor: (
       @include border-color(currentColor, #{$rwd});
     }
     x*/
-    @each $key, $value in $BorderColor {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:border-#{$key} {
         @include border-color(#{$value}, #{$rwd});

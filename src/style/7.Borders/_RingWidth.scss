@@ -1,5 +1,5 @@
-// arbitrary same as @mixin ring-($v)
-$group-RingWidth: (
+// arbitrary utility same as @mixin ring-($v)
+$data: (
   'ring-0': '0px + $tw-ring-offset-width',
   'ring-1': '1px + $tw-ring-offset-width',
   'ring-2': '2px + $tw-ring-offset-width',
@@ -8,12 +8,12 @@ $group-RingWidth: (
   'ring-8': '8px + $tw-ring-offset-width',
 );
 
-$group-RingWidth-inset: (
+$data-inset: (
   'ring-inset': null,
 );
 
 @if $isBasic {
-  @each $key, $value in $group-RingWidth {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       $tw-mismatch--ring-offset-width: true !global;
@@ -24,7 +24,7 @@ $group-RingWidth-inset: (
     x*/
   }
 
-  @each $key, $value in $group-RingWidth-inset {
+  @each $key, $value in $data-inset {
     /*x
     @mixin #{$key} {
       $tw-mismatch--ring-offset-width: true !global;
@@ -35,9 +35,9 @@ $group-RingWidth-inset: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $group-RingWidth {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         $tw-mismatch--ring-offset-width: true !global;
@@ -48,7 +48,7 @@ $group-RingWidth-inset: (
       x*/
     }
 
-    @each $key, $value in $group-RingWidth-inset {
+    @each $key, $value in $data-inset {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         $tw-mismatch--ring-offset-width: true !global;

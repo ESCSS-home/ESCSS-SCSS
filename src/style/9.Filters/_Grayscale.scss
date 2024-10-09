@@ -1,10 +1,10 @@
-$_grayscale: (
+$data: (
   'grayscale-0': grayscale(0),
   'grayscale': grayscale(100%),
 );
 
 @if $isBasic {
-  @each $key, $value in $_grayscale {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       $tw-grayscale: #{$value} !global;
@@ -14,9 +14,9 @@ $_grayscale: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $_grayscale {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         $tw-grayscale: #{$value} !global;

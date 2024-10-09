@@ -1,4 +1,4 @@
-$TextUnderlineOffset: (
+$data: (
   'underline-offset-auto': auto,
   'underline-offset-0': 0px,
   'underline-offset-1': 1px,
@@ -8,7 +8,7 @@ $TextUnderlineOffset: (
 );
 
 @if $isBasic {
-  @each $key, $value in $TextUnderlineOffset {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include text-underline-offset(#{$value});
@@ -17,9 +17,9 @@ $TextUnderlineOffset: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $TextUnderlineOffset {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include text-underline-offset(#{$value}, #{$rwd});

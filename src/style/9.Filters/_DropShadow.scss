@@ -1,4 +1,4 @@
-$DropShadow: (
+$data: (
   'drop-shadow-sm': drop-shadow(0 1px 1px rgb(0 0 0 / 0.05)),
   'drop-shadow': drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06)),
   'drop-shadow-md': drop-shadow(0 4px 3px rgb(0 0 0 / 0.07))
@@ -12,7 +12,7 @@ $DropShadow: (
 );
 
 @if $isBasic {
-  @each $key, $value in $DropShadow {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       $tw-drop-shadow: #{$value} !global;
@@ -22,9 +22,9 @@ $DropShadow: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $DropShadow {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         $tw-drop-shadow: #{$value} !global;

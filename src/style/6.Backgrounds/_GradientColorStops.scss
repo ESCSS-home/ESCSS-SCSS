@@ -2,7 +2,7 @@ $group-from: true;
 $group-via: true;
 $group-to: true;
 
-$GradientColorStops-color: (
+$data-color: (
   'name-50': '$_name-50',
   'name-100': '$_name-100',
   'name-200': '$_name-200',
@@ -283,7 +283,7 @@ $GradientColorStops-color: (
   'rose-950': '$_rose-950',
 );
 
-$GradientColorStops-position: (
+$data-position: (
   '0\\%': 0%,
   '5\\%': 5%,
   '10\\%': 10%,
@@ -319,7 +319,7 @@ $GradientColorStops-position: (
       @include background-image(_l-g());
     }
     x*/
-    @each $key, $value in $GradientColorStops-color {
+    @each $key, $value in $data-color {
       @if $isAwaken {
         /*x
         @mixin from-#{$key}($v: 1) {
@@ -342,7 +342,7 @@ $GradientColorStops-position: (
       }
     }
 
-    @each $key, $value in $GradientColorStops-position {
+    @each $key, $value in $data-position {
       /*x
       @mixin from-#{$key} {
         $tw-gradient-from-position: #{$value} !global;
@@ -363,7 +363,7 @@ $GradientColorStops-position: (
       @include background-image(_l-g());
     }
     x*/
-    @each $key, $value in $GradientColorStops-color {
+    @each $key, $value in $data-color {
       @if $isAwaken {
         /*x
         @mixin via-#{$key}($v: 1) {
@@ -386,7 +386,7 @@ $GradientColorStops-position: (
       }
     }
 
-    @each $key, $value in $GradientColorStops-position {
+    @each $key, $value in $data-position {
       /*x
       @mixin via-#{$key} {
         $tw-gradient-via-position: #{$value} !global;
@@ -407,7 +407,7 @@ $GradientColorStops-position: (
       @include background-image(_l-g());
     }
     x*/
-    @each $key, $value in $GradientColorStops-color {
+    @each $key, $value in $data-color {
       @if $isAwaken {
         /*x
         @mixin to-#{$key}($v: 1) {
@@ -430,7 +430,7 @@ $GradientColorStops-position: (
       }
     }
 
-    @each $key, $value in $GradientColorStops-position {
+    @each $key, $value in $data-position {
       /*x
       @mixin to-#{$key} {
         $tw-gradient-to-position: #{$value} !global;
@@ -441,7 +441,7 @@ $GradientColorStops-position: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
     @if $group-from {
       /*x
@@ -454,7 +454,7 @@ $GradientColorStops-position: (
         @include background-image(_l-g(), #{$rwd});
       }
       x*/
-      @each $key, $value in $GradientColorStops-color {
+      @each $key, $value in $data-color {
         /*x
         @mixin #{$rwdToken}\:from-#{$key} {
           $tw-gradient-from: #{$value} !global;
@@ -468,7 +468,7 @@ $GradientColorStops-position: (
         x*/
       }
 
-      @each $key, $value in $GradientColorStops-position {
+      @each $key, $value in $data-position {
         /*x
         @mixin #{$rwdToken}\:from-#{$key} {
           $tw-gradient-from-position: #{$value} !global;
@@ -510,7 +510,7 @@ $GradientColorStops-position: (
         @include background-image(_l-g(), #{$rwd});
       }
       x*/
-      @each $key, $value in $GradientColorStops-color {
+      @each $key, $value in $data-color {
         /*x
         @mixin #{$rwdToken}\:via-#{$key} {
           $tw-gradient-via: #{$value} !global;
@@ -524,7 +524,7 @@ $GradientColorStops-position: (
         x*/
       }
 
-      @each $key, $value in $GradientColorStops-position {
+      @each $key, $value in $data-position {
         /*x
         @mixin #{$rwdToken}\:via-#{$key} {
           $tw-gradient-via-position: #{$value} !global;
@@ -567,7 +567,7 @@ $GradientColorStops-position: (
       }
       x*/
 
-      @each $key, $value in $GradientColorStops-color {
+      @each $key, $value in $data-color {
         /*x
         @mixin #{$rwdToken}\:to-#{$key} {
           $tw-gradient-to: #{$value} !global;
@@ -581,7 +581,7 @@ $GradientColorStops-position: (
         x*/
       }
 
-      @each $key, $value in $GradientColorStops-position {
+      @each $key, $value in $data-position {
         /*x
         @mixin #{$rwdToken}\:to-#{$key} {
           $tw-gradient-to-position: #{$value} !global;

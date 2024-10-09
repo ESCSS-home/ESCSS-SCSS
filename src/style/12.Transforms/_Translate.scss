@@ -1,4 +1,4 @@
-$Translate: (
+$data: (
   '0': '$_0',
   'px': '$_px',
   '0\\.5': '$_0\\.5',
@@ -44,7 +44,7 @@ $Translate: (
 );
 
 @if $isBasic {
-  @each $key, $value in $Translate {
+  @each $key, $value in $data {
     /*x
     @mixin translate-x-#{$key} {
       $tw-translate-x: #{$value} !global;
@@ -59,9 +59,9 @@ $Translate: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $Translate {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:translate-x-#{$key} {
         $tw-translate-x: #{$value} !global;
@@ -105,7 +105,7 @@ $Translate: (
 
 @if $isNegative {
   @if $isBasic {
-    @each $key, $value in $Translate {
+    @each $key, $value in $data {
       /*x
       @mixin -translate-x-#{$key} {
         $tw-translate-x: -#{$value} !global;
@@ -120,9 +120,9 @@ $Translate: (
     }
   }
 
-  @if $isRwd and (not $isAwaken) {
+  @if $isResponsive and (not $isAwaken) {
     @each $rwdToken, $rwd in $rwdBox {
-      @each $key, $value in $Translate {
+      @each $key, $value in $data {
         /*x
         @mixin #{$rwdToken}\:-translate-x-#{$key} {
           $tw-translate-x: -#{$value} !global;

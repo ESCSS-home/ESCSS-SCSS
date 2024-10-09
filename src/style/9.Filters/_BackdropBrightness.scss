@@ -1,4 +1,4 @@
-$BackdropBrightness: (
+$data: (
   'backdrop-brightness-0': brightness(0),
   'backdrop-brightness-50': brightness(0.5),
   'backdrop-brightness-75': brightness(0.75),
@@ -13,7 +13,7 @@ $BackdropBrightness: (
 );
 
 @if $isBasic {
-  @each $key, $value in $BackdropBrightness {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       $tw-backdrop-brightness: #{$value} !global;
@@ -23,9 +23,9 @@ $BackdropBrightness: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $BackdropBrightness {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         $tw-backdrop-brightness: #{$value} !global;

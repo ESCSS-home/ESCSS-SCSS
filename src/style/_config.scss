@@ -1,9 +1,9 @@
 /*x
-// Set your project's breakpoint 
+// Set your project's breakpoints
 $_sm: 0px !default;
-$_md: 0px !default; 
-$_lg: 0px !default; 
-$_xl: 0px !default; 
+$_md: 0px !default;
+$_lg: 0px !default;
+$_xl: 0px !default;
 $_xxl: 0px !default;
 
 $_name-50: null !default;
@@ -311,65 +311,65 @@ $_rose-950: #4c0519 !default;
 
 // Spacing
 $_0: 0px !default; //	0px
-$_px: 1px !default; //	1px
-$_0\.5: 0.125rem !default; //	2px
-$_1: 0.25rem !default; //	4px
-$_1\.5: 0.375rem !default; //	6px
-$_2: 0.5rem !default; //	8px
-$_2\.5: 0.625rem !default; //	10px
-$_3: 0.75rem !default; //	12px
-$_3\.5: 0.875rem !default; //	14px
-$_4: 1rem !default; //	16px
-$_5: 1.25rem !default; //	20px
-$_6: 1.5rem !default; //	24px
-$_7: 1.75rem !default; //	28px
-$_8: 2rem !default; //	32px
-$_9: 2.25rem !default; //	36px
-$_10: 2.5rem !default; //	40px
-$_11: 2.75rem !default; //	44px
-$_12: 3rem !default; //	48px
-$_14: 3.5rem !default; //	56px
-$_16: 4rem !default; //	64px
-$_20: 5rem !default; //	80px
-$_24: 6rem !default; //	96px
-$_28: 7rem !default; //	112px
-$_32: 8rem !default; //	128px
-$_36: 9rem !default; //	144px
-$_40: 10rem !default; //	160px
-$_44: 11rem !default; //	176px
-$_48: 12rem !default; //	192px
-$_52: 13rem !default; //	208px
-$_56: 14rem !default; //	224px
-$_60: 15rem !default; //	240px
-$_64: 16rem !default; //	256px
-$_72: 18rem !default; //	288px
-$_80: 20rem !default; //	320px
-$_96: 24rem !default; //	384px
+$_px: 1px !default; // 1px
+$_0\.5: 0.125rem !default; // 2px
+$_1: 0.25rem !default; // 4px
+$_1\.5: 0.375rem !default; // 6px
+$_2: 0.5rem !default; // 8px
+$_2\.5: 0.625rem !default; // 10px
+$_3: 0.75rem !default; // 12px
+$_3\.5: 0.875rem !default; // 14px
+$_4: 1rem !default; // 16px
+$_5: 1.25rem !default; // 20px
+$_6: 1.5rem !default; // 24px
+$_7: 1.75rem !default; // 28px
+$_8: 2rem !default; // 32px
+$_9: 2.25rem !default; // 36px
+$_10: 2.5rem !default; // 40px
+$_11: 2.75rem !default; // 44px
+$_12: 3rem !default; // 48px
+$_14: 3.5rem !default; // 56px
+$_16: 4rem !default; // 64px
+$_20: 5rem !default; // 80px
+$_24: 6rem !default; // 96px
+$_28: 7rem !default; // 112px
+$_32: 8rem !default; // 128px
+$_36: 9rem !default; // 144px
+$_40: 10rem !default; // 160px
+$_44: 11rem !default; // 176px
+$_48: 12rem !default; // 192px
+$_52: 13rem !default; // 208px
+$_56: 14rem !default; // 224px
+$_60: 15rem !default; // 240px
+$_64: 16rem !default; // 256px
+$_72: 18rem !default; // 288px
+$_80: 20rem !default; // 320px
+$_96: 24rem !default; // 384px
 
 // Font Size - font-size
-$_font-size_xs: 0.75rem !default;  // 12px
-$_font-size_sm: 0.875rem !default;  // 14px
-$_font-size_base: 1rem !default;  // 16px
-$_font-size_lg: 1.125rem !default;  // 18px
-$_font-size_xl: 1.25rem !default;  // 20px
-$_font-size_2xl: 1.5rem !default;  // 24px
-$_font-size_3xl: 1.875rem !default;  // 30px
-$_font-size_4xl: 2.25rem !default;  // 36px
-$_font-size_5xl: 3rem !default;  // 48px
-$_font-size_6xl: 3.75rem !default;  // 60px
-$_font-size_7xl: 4.5rem !default;  // 72px
-$_font-size_8xl: 6rem !default;  // 96px
-$_font-size_9xl: 8rem !default;  // 128px
+$_font-size_xs: 0.75rem !default; // 12px
+$_font-size_sm: 0.875rem !default; // 14px
+$_font-size_base: 1rem !default; // 16px
+$_font-size_lg: 1.125rem !default; // 18px
+$_font-size_xl: 1.25rem !default; // 20px
+$_font-size_2xl: 1.5rem !default; // 24px
+$_font-size_3xl: 1.875rem !default; // 30px
+$_font-size_4xl: 2.25rem !default; // 36px
+$_font-size_5xl: 3rem !default; // 48px
+$_font-size_6xl: 3.75rem !default; // 60px
+$_font-size_7xl: 4.5rem !default; // 72px
+$_font-size_8xl: 6rem !default; // 96px
+$_font-size_9xl: 8rem !default; // 128px
 
 // Font Size - height
-$_line-height_xs: 1rem !default;  // 16px
-$_line-height_sm: 1.25rem !default;  // 20px
-$_line-height_base: 1.5rem !default;  // 24px
-$_line-height_lg: 1.75rem !default;  // 28px
-$_line-height_xl: 1.75rem !default;  // 28px
-$_line-height_2xl: 2rem !default;  // 32px
-$_line-height_3xl: 2.25rem !default;  // 36px
-$_line-height_4xl: 2.5rem !default;  // 40px
+$_line-height_xs: 1rem !default; // 16px
+$_line-height_sm: 1.25rem !default; // 20px
+$_line-height_base: 1.5rem !default; // 24px
+$_line-height_lg: 1.75rem !default; // 28px
+$_line-height_xl: 1.75rem !default; // 28px
+$_line-height_2xl: 2rem !default; // 32px
+$_line-height_3xl: 2.25rem !default; // 36px
+$_line-height_4xl: 2.5rem !default; // 40px
 $_line-height_5xl: 1 !default;
 $_line-height_6xl: 1 !default;
 $_line-height_7xl: 1 !default;
@@ -477,17 +477,407 @@ $tw-mismatch--snap: false !default;
 $tw-mismatch--shadow-color: false !default;
 $tw-mismatch--ring-offset-width: false !default;
 
-$_check_sm: $_sm;
-$_check_md: $_md;
-$_check_lg: $_lg;
-$_check_xl: $_xl;
-$_check_xxl: $_xxl;
-
 .AGPLv3-Term13-Modification-Check {
-  sm: $_sm;
-  md: $_md;
-  lg: $_lg;
-  xl: $_xl;
-  xxl: $_xxl;
+  _sm: $_sm;
+  _md: $_md;
+  _lg: $_lg;
+  _xl: $_xl;
+  _xxl: $_xxl;
+
+  _name-50: $_name-50;
+  _name-100: $_name-100;
+  _name-200: $_name-200;
+  _name-300: $_name-300;
+  _name-400: $_name-400;
+  _name-500: $_name-500;
+  _name-600: $_name-600;
+  _name-700: $_name-700;
+  _name-800: $_name-800;
+  _name-900: $_name-900;
+  _name-950: $_name-950;
+
+  _name2-50: $_name2-50;
+  _name2-100: $_name2-100;
+  _name2-200: $_name2-200;
+  _name2-300: $_name2-300;
+  _name2-400: $_name2-400;
+  _name2-500: $_name2-500;
+  _name2-600: $_name2-600;
+  _name2-700: $_name2-700;
+  _name2-800: $_name2-800;
+  _name2-900: $_name2-900;
+  _name2-950: $_name2-950;
+
+  _name3-50: $_name3-50;
+  _name3-100: $_name3-100;
+  _name3-200: $_name3-200;
+  _name3-300: $_name3-300;
+  _name3-400: $_name3-400;
+  _name3-500: $_name3-500;
+  _name3-600: $_name3-600;
+  _name3-700: $_name3-700;
+  _name3-800: $_name3-800;
+  _name3-900: $_name3-900;
+  _name3-950: $_name3-950;
+
+  _black: $_black;
+  _white: $_white;
+
+  _slate-50: $_slate-50;
+  _slate-100: $_slate-100;
+  _slate-200: $_slate-200;
+  _slate-300: $_slate-300;
+  _slate-400: $_slate-400;
+  _slate-500: $_slate-500;
+  _slate-600: $_slate-600;
+  _slate-700: $_slate-700;
+  _slate-800: $_slate-800;
+  _slate-900: $_slate-900;
+  _slate-950: $_slate-950;
+
+  _gray-50: $_gray-50;
+  _gray-100: $_gray-100;
+  _gray-200: $_gray-200;
+  _gray-300: $_gray-300;
+  _gray-400: $_gray-400;
+  _gray-500: $_gray-500;
+  _gray-600: $_gray-600;
+  _gray-700: $_gray-700;
+  _gray-800: $_gray-800;
+  _gray-900: $_gray-900;
+  _gray-950: $_gray-950;
+
+  _zinc-50: $_zinc-50;
+  _zinc-100: $_zinc-100;
+  _zinc-200: $_zinc-200;
+  _zinc-300: $_zinc-300;
+  _zinc-400: $_zinc-400;
+  _zinc-500: $_zinc-500;
+  _zinc-600: $_zinc-600;
+  _zinc-700: $_zinc-700;
+  _zinc-800: $_zinc-800;
+  _zinc-900: $_zinc-900;
+  _zinc-950: $_zinc-950;
+
+  _neutral-50: $_neutral-50;
+  _neutral-100: $_neutral-100;
+  _neutral-200: $_neutral-200;
+  _neutral-300: $_neutral-300;
+  _neutral-400: $_neutral-400;
+  _neutral-500: $_neutral-500;
+  _neutral-600: $_neutral-600;
+  _neutral-700: $_neutral-700;
+  _neutral-800: $_neutral-800;
+  _neutral-900: $_neutral-900;
+  _neutral-950: $_neutral-950;
+
+  _stone-50: $_stone-50;
+  _stone-100: $_stone-100;
+  _stone-200: $_stone-200;
+  _stone-300: $_stone-300;
+  _stone-400: $_stone-400;
+  _stone-500: $_stone-500;
+  _stone-600: $_stone-600;
+  _stone-700: $_stone-700;
+  _stone-800: $_stone-800;
+  _stone-900: $_stone-900;
+  _stone-950: $_stone-950;
+
+  _red-50: $_red-50;
+  _red-100: $_red-100;
+  _red-200: $_red-200;
+  _red-300: $_red-300;
+  _red-400: $_red-400;
+  _red-500: $_red-500;
+  _red-600: $_red-600;
+  _red-700: $_red-700;
+  _red-800: $_red-800;
+  _red-900: $_red-900;
+  _red-950: $_red-950;
+
+  _orange-50: $_orange-50;
+  _orange-100: $_orange-100;
+  _orange-200: $_orange-200;
+  _orange-300: $_orange-300;
+  _orange-400: $_orange-400;
+  _orange-500: $_orange-500;
+  _orange-600: $_orange-600;
+  _orange-700: $_orange-700;
+  _orange-800: $_orange-800;
+  _orange-900: $_orange-900;
+  _orange-950: $_orange-950;
+
+  _amber-50: $_amber-50;
+  _amber-100: $_amber-100;
+  _amber-200: $_amber-200;
+  _amber-300: $_amber-300;
+  _amber-400: $_amber-400;
+  _amber-500: $_amber-500;
+  _amber-600: $_amber-600;
+  _amber-700: $_amber-700;
+  _amber-800: $_amber-800;
+  _amber-900: $_amber-900;
+  _amber-950: $_amber-950;
+
+  _yellow-50: $_yellow-50;
+  _yellow-100: $_yellow-100;
+  _yellow-200: $_yellow-200;
+  _yellow-300: $_yellow-300;
+  _yellow-400: $_yellow-400;
+  _yellow-500: $_yellow-500;
+  _yellow-600: $_yellow-600;
+  _yellow-700: $_yellow-700;
+  _yellow-800: $_yellow-800;
+  _yellow-900: $_yellow-900;
+  _yellow-950: $_yellow-950;
+
+  _lime-50: $_lime-50;
+  _lime-100: $_lime-100;
+  _lime-200: $_lime-200;
+  _lime-300: $_lime-300;
+  _lime-400: $_lime-400;
+  _lime-500: $_lime-500;
+  _lime-600: $_lime-600;
+  _lime-700: $_lime-700;
+  _lime-800: $_lime-800;
+  _lime-900: $_lime-900;
+  _lime-950: $_lime-950;
+
+  _green-50: $_green-50;
+  _green-100: $_green-100;
+  _green-200: $_green-200;
+  _green-300: $_green-300;
+  _green-400: $_green-400;
+  _green-500: $_green-500;
+  _green-600: $_green-600;
+  _green-700: $_green-700;
+  _green-800: $_green-800;
+  _green-900: $_green-900;
+  _green-950: $_green-950;
+
+  _emerald-50: $_emerald-50;
+  _emerald-100: $_emerald-100;
+  _emerald-200: $_emerald-200;
+  _emerald-300: $_emerald-300;
+  _emerald-400: $_emerald-400;
+  _emerald-500: $_emerald-500;
+  _emerald-600: $_emerald-600;
+  _emerald-700: $_emerald-700;
+  _emerald-800: $_emerald-800;
+  _emerald-900: $_emerald-900;
+  _emerald-950: $_emerald-950;
+
+  _teal-50: $_teal-50;
+  _teal-100: $_teal-100;
+  _teal-200: $_teal-200;
+  _teal-300: $_teal-300;
+  _teal-400: $_teal-400;
+  _teal-500: $_teal-500;
+  _teal-600: $_teal-600;
+  _teal-700: $_teal-700;
+  _teal-800: $_teal-800;
+  _teal-900: $_teal-900;
+  _teal-950: $_teal-950;
+
+  _cyan-50: $_cyan-50;
+  _cyan-100: $_cyan-100;
+  _cyan-200: $_cyan-200;
+  _cyan-300: $_cyan-300;
+  _cyan-400: $_cyan-400;
+  _cyan-500: $_cyan-500;
+  _cyan-600: $_cyan-600;
+  _cyan-700: $_cyan-700;
+  _cyan-800: $_cyan-800;
+  _cyan-900: $_cyan-900;
+  _cyan-950: $_cyan-950;
+
+  _sky-50: $_sky-50;
+  _sky-100: $_sky-100;
+  _sky-200: $_sky-200;
+  _sky-300: $_sky-300;
+  _sky-400: $_sky-400;
+  _sky-500: $_sky-500;
+  _sky-600: $_sky-600;
+  _sky-700: $_sky-700;
+  _sky-800: $_sky-800;
+  _sky-900: $_sky-900;
+  _sky-950: $_sky-950;
+
+  _blue-50: $_blue-50;
+  _blue-100: $_blue-100;
+  _blue-200: $_blue-200;
+  _blue-300: $_blue-300;
+  _blue-400: $_blue-400;
+  _blue-500: $_blue-500;
+  _blue-600: $_blue-600;
+  _blue-700: $_blue-700;
+  _blue-800: $_blue-800;
+  _blue-900: $_blue-900;
+  _blue-950: $_blue-950;
+
+  _indigo-50: $_indigo-50;
+  _indigo-100: $_indigo-100;
+  _indigo-200: $_indigo-200;
+  _indigo-300: $_indigo-300;
+  _indigo-400: $_indigo-400;
+  _indigo-500: $_indigo-500;
+  _indigo-600: $_indigo-600;
+  _indigo-700: $_indigo-700;
+  _indigo-800: $_indigo-800;
+  _indigo-900: $_indigo-900;
+  _indigo-950: $_indigo-950;
+
+  _violet-50: $_violet-50;
+  _violet-100: $_violet-100;
+  _violet-200: $_violet-200;
+  _violet-300: $_violet-300;
+  _violet-400: $_violet-400;
+  _violet-500: $_violet-500;
+  _violet-600: $_violet-600;
+  _violet-700: $_violet-700;
+  _violet-800: $_violet-800;
+  _violet-900: $_violet-900;
+  _violet-950: $_violet-950;
+
+  _purple-50: $_purple-50;
+  _purple-100: $_purple-100;
+  _purple-200: $_purple-200;
+  _purple-300: $_purple-300;
+  _purple-400: $_purple-400;
+  _purple-500: $_purple-500;
+  _purple-600: $_purple-600;
+  _purple-700: $_purple-700;
+  _purple-800: $_purple-800;
+  _purple-900: $_purple-900;
+  _purple-950: $_purple-950;
+
+  _fuchsia-50: $_fuchsia-50;
+  _fuchsia-100: $_fuchsia-100;
+  _fuchsia-200: $_fuchsia-200;
+  _fuchsia-300: $_fuchsia-300;
+  _fuchsia-400: $_fuchsia-400;
+  _fuchsia-500: $_fuchsia-500;
+  _fuchsia-600: $_fuchsia-600;
+  _fuchsia-700: $_fuchsia-700;
+  _fuchsia-800: $_fuchsia-800;
+  _fuchsia-900: $_fuchsia-900;
+  _fuchsia-950: $_fuchsia-950;
+
+  _pink-50: $_pink-50;
+  _pink-100: $_pink-100;
+  _pink-200: $_pink-200;
+  _pink-300: $_pink-300;
+  _pink-400: $_pink-400;
+  _pink-500: $_pink-500;
+  _pink-600: $_pink-600;
+  _pink-700: $_pink-700;
+  _pink-800: $_pink-800;
+  _pink-900: $_pink-900;
+  _pink-950: $_pink-950;
+
+  _rose-100: $_rose-100;
+  _rose-200: $_rose-200;
+  _rose-300: $_rose-300;
+  _rose-400: $_rose-400;
+  _rose-500: $_rose-500;
+  _rose-600: $_rose-600;
+  _rose-700: $_rose-700;
+  _rose-800: $_rose-800;
+  _rose-900: $_rose-900;
+  _rose-950: $_rose-950;
+
+  _0: $_0;
+  _px: $_px;
+  _0o5: $_0\.5;
+  _1: $_1;
+  _1o5: $_1\.5;
+  _2: $_2;
+  _2o5: $_2\.5;
+  _3: $_3;
+  _3o5: $_3\.5;
+  _4: $_4;
+  _5: $_5;
+  _6: $_6;
+  _7: $_7;
+  _8: $_8;
+  _9: $_9;
+  _10: $_10;
+  _11: $_11;
+  _12: $_12;
+  _14: $_14;
+  _16: $_16;
+  _20: $_20;
+  _24: $_24;
+  _28: $_28;
+  _32: $_32;
+  _36: $_36;
+  _40: $_40;
+  _44: $_44;
+  _48: $_48;
+  _52: $_52;
+  _56: $_56;
+  _60: $_60;
+  _64: $_64;
+  _72: $_72;
+  _80: $_80;
+  _96: $_96;
+
+  _font-size_xs: $_font-size_xs;
+  _font-size_sm: $_font-size_sm;
+  _font-size_base: $_font-size_base;
+  _font-size_lg: $_font-size_lg;
+  _font-size_xl: $_font-size_xl;
+  _font-size_2xl: $_font-size_2xl;
+  _font-size_3xl: $_font-size_3xl;
+  _font-size_4xl: $_font-size_4xl;
+  _font-size_5xl: $_font-size_5xl;
+  _font-size_6xl: $_font-size_6xl;
+  _font-size_7xl: $_font-size_7xl;
+  _font-size_8xl: $_font-size_8xl;
+  _font-size_9xl: $_font-size_9xl;
+
+  _line-height_xs: $_line-height_xs;
+  _line-height_sm: $_line-height_sm;
+  _line-height_base: $_line-height_base;
+  _line-height_lg: $_line-height_lg;
+  _line-height_xl: $_line-height_xl;
+  _line-height_2xl: $_line-height_2xl;
+  _line-height_3xl: $_line-height_3xl;
+  _line-height_4xl: $_line-height_4xl;
+  _line-height_5xl: $_line-height_5xl;
+  _line-height_6xl: $_line-height_6xl;
+  _line-height_7xl: $_line-height_7xl;
+  _line-height_8xl: $_line-height_8xl;
+  _line-height_9xl: $_line-height_9xl;
+
+  _leading-3: $_leading-3;
+  _leading-4: $_leading-4;
+  _leading-5: $_leading-5;
+  _leading-6: $_leading-6;
+  _leading-7: $_leading-7;
+  _leading-8: $_leading-8;
+  _leading-9: $_leading-9;
+  _leading-10: $_leading-10;
+  _leading-none: $_leading-none;
+  _leading-tight: $_leading-tight;
+  _leading-snug: $_leading-snug;
+  _leading-normal: $_leading-normal;
+  _leading-relaxed: $_leading-relaxed;
+  _leading-loose: $_leading-loose;
+
+  _rounded-sm: $_rounded-sm;
+  _rounded: $_rounded;
+  _rounded-md: $_rounded-md;
+  _rounded-lg: $_rounded-lg;
+  _rounded-xl: $_rounded-xl;
+  _rounded-2xl: $_rounded-2xl;
+  _rounded-3xl: $_rounded-3xl;
+
+  _tighter: $_tighter;
+  _tight: $_tight;
+  _normal: $_normal;
+  _wide: $_wide;
+  _wider: $_wider;
+  _widest: $_widest;
 }
 x*/

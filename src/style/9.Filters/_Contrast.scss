@@ -1,4 +1,4 @@
-$Contrast: (
+$data: (
   'contrast-0': contrast(0),
   'contrast-50': contrast(0.5),
   'contrast-75': contrast(0.75),
@@ -9,7 +9,7 @@ $Contrast: (
 );
 
 @if $isBasic {
-  @each $key, $value in $Contrast {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       $tw-contrast: #{$value} !global;
@@ -19,9 +19,9 @@ $Contrast: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $Contrast {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         $tw-contrast: #{$value} !global;

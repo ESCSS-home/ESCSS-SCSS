@@ -1,4 +1,4 @@
-$UserSelect: (
+$data: (
   'select-none': none,
   'select-text': text,
   'select-all': all,
@@ -6,7 +6,7 @@ $UserSelect: (
 );
 
 @if $isBasic {
-  @each $key, $value in $UserSelect {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include user-select(#{$value});
@@ -15,9 +15,9 @@ $UserSelect: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $UserSelect {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include user-select(#{$value}, #{$rwd});

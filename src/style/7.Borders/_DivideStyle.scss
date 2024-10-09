@@ -1,4 +1,4 @@
-$DivideStyle: (
+$data: (
   'divide-solid': solid,
   'divide-dashed': dashed,
   'divide-dotted': dotted,
@@ -7,7 +7,7 @@ $DivideStyle: (
 );
 
 @if $isBasic {
-  @each $key, $value in $DivideStyle {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key}{
       >*~* {
@@ -18,9 +18,9 @@ $DivideStyle: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $DivideStyle {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key}{
         >*~* {

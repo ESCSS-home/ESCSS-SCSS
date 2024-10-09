@@ -1,10 +1,10 @@
-$BackdropInvert: (
+$data: (
   'backdrop-invert-0': invert(0),
   'backdrop-invert': invert(100%),
 );
 
 @if $isBasic {
-  @each $key, $value in $BackdropInvert {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       $tw-backdrop-invert: #{$value} !global;
@@ -14,9 +14,9 @@ $BackdropInvert: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $BackdropInvert {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         $tw-backdrop-invert: #{$value} !global;

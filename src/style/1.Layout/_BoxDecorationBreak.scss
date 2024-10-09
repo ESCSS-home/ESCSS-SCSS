@@ -1,10 +1,10 @@
-$BoxDecorationBreak: (
+$data: (
   'box-decoration-clone': clone,
   'box-decoration-slice': slice,
 );
 
 @if $isBasic {
-  @each $key, $value in $BoxDecorationBreak {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include box-decoration-break(#{$value});
@@ -13,9 +13,9 @@ $BoxDecorationBreak: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $BoxDecorationBreak {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include box-decoration-break(#{$value}, #{$rwd});

@@ -1,4 +1,4 @@
-$PlaceItems: (
+$data: (
   'place-items-start': start,
   'place-items-end': end,
   'place-items-center': center,
@@ -7,7 +7,7 @@ $PlaceItems: (
 );
 
 @if $isBasic {
-  @each $key, $value in $PlaceItems {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include place-items(#{$value});
@@ -16,9 +16,9 @@ $PlaceItems: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $PlaceItems {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include place-items(#{$value}, #{$rwd});

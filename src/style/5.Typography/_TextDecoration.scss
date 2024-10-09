@@ -1,4 +1,4 @@
-$TextDecoration: (
+$data: (
   'underline': underline,
   'overline': overline,
   'line-through': line-through,
@@ -6,7 +6,7 @@ $TextDecoration: (
 );
 
 @if $isBasic {
-  @each $key, $value in $TextDecoration {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key}{
       @include 	text-decoration-line(#{$value});
@@ -15,9 +15,9 @@ $TextDecoration: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $TextDecoration {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key}{
         @include 	text-decoration-line(#{$value}, #{$rwd});

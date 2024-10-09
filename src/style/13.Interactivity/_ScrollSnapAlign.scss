@@ -1,4 +1,4 @@
-$ScrollSnapAlign: (
+$data: (
   'snap-start': start,
   'snap-end': end,
   'snap-center': center,
@@ -6,7 +6,7 @@ $ScrollSnapAlign: (
 );
 
 @if $isBasic {
-  @each $key, $value in $ScrollSnapAlign {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include scroll-snap-align(#{$value});
@@ -15,9 +15,9 @@ $ScrollSnapAlign: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $ScrollSnapAlign {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include scroll-snap-align(#{$value}, #{$rwd});

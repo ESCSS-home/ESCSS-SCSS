@@ -1,4 +1,4 @@
-$DivideWidth: (
+$data: (
   '-0': 0px,
   null: 1px,
   '-2': 2px,
@@ -26,7 +26,7 @@ $DivideWidth: (
     }
   }
   x*/
-  @each $key, $value in $DivideWidth {
+  @each $key, $value in $data {
     /*x
     @mixin divide-x#{$key} {
       $tw-dummy-divide-x-value: #{$value} !global;
@@ -49,7 +49,7 @@ $DivideWidth: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
     /*x
       @mixin #{$rwdToken}\:divide-x-reverse {
@@ -73,7 +73,7 @@ $DivideWidth: (
         }
       }
       x*/
-    @each $key, $value in $DivideWidth {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:divide-x#{$key} {
         $tw-dummy-divide-x-value: #{$value} !global; // update global value for using reverse

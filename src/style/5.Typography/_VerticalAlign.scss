@@ -1,4 +1,4 @@
-$VerticalAlign: (
+$data: (
   'align-baseline': baseline,
   'align-top': top,
   'align-middle': middle,
@@ -10,7 +10,7 @@ $VerticalAlign: (
 );
 
 @if $isBasic {
-  @each $key, $value in $VerticalAlign {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include vertical-align(#{$value});
@@ -19,9 +19,9 @@ $VerticalAlign: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $VerticalAlign {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include vertical-align(#{$value}, #{$rwd});

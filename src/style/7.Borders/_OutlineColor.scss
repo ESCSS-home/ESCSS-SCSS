@@ -1,4 +1,4 @@
-$OutlineColor: (
+$data: (
   'name-50': '$_name-50',
   'name-100': '$_name-100',
   'name-200': '$_name-200',
@@ -289,7 +289,7 @@ $OutlineColor: (
     @include outline-color(currentColor);
   }
   x*/
-  @each $key, $value in $OutlineColor {
+  @each $key, $value in $data {
     @if $isAwaken {
       /*x
       @mixin outline-#{$key}($v: 1) {
@@ -310,7 +310,7 @@ $OutlineColor: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
     /*x
     @mixin #{$rwdToken}\:outline-inherit {
@@ -321,7 +321,7 @@ $OutlineColor: (
       @include outline-color(currentColor, #{$rwd});
     }
     x*/
-    @each $key, $value in $OutlineColor {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:outline-#{$key} {
         @include outline-color(#{$value}, #{$rwd});

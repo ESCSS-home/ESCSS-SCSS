@@ -1,10 +1,10 @@
-$PointerEvents: (
+$data: (
   'pointer-events-none': none,
   'pointer-events-auto': auto,
 );
 
 @if $isBasic {
-  @each $key, $value in $PointerEvents {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include pointer-events(#{$value});
@@ -13,9 +13,9 @@ $PointerEvents: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $PointerEvents {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include pointer-events(#{$value}, #{$rwd});

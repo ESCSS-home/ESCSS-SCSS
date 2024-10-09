@@ -1,4 +1,4 @@
-$FontVariantNumeric: (
+$data: (
   'normal-nums': normal,
   'ordinal': ordinal,
   'slashed-zero': slashed-zero,
@@ -11,7 +11,7 @@ $FontVariantNumeric: (
 );
 
 @if $isBasic {
-  @each $key, $value in $FontVariantNumeric {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include font-variant-numeric(#{$value});
@@ -20,9 +20,9 @@ $FontVariantNumeric: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $FontVariantNumeric {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include font-variant-numeric(#{$value}, #{$rwd});

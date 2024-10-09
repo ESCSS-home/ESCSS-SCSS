@@ -1,4 +1,4 @@
-$BackgroundsColor: (
+$data: (
   'name-50': '$_name-50',
   'name-100': '$_name-100',
   'name-200': '$_name-200',
@@ -289,7 +289,7 @@ $BackgroundsColor: (
     @include background-color(currentColor);
   }
   x*/
-  @each $key, $value in $BackgroundsColor {
+  @each $key, $value in $data {
     @if $isAwaken {
       /*x
       @mixin bg-#{$key}($v: 1) {
@@ -310,7 +310,7 @@ $BackgroundsColor: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
     /*x
     @mixin #{$rwdToken}\:bg-inherit {
@@ -321,7 +321,7 @@ $BackgroundsColor: (
       @include background-color(currentColor, #{$rwd});
     }
     x*/
-    @each $key, $value in $BackgroundsColor {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:bg-#{$key} {
         @include background-color(#{$value}, #{$rwd});

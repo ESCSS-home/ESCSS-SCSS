@@ -1,11 +1,11 @@
-$FlexWrap: (
+$data: (
   'flex-wrap': wrap,
   'flex-wrap-reverse': wrap-reverse,
   'flex-nowrap': nowrap,
 );
 
 @if $isBasic {
-  @each $key, $value in $FlexWrap {
+  @each $key, $value in $data {
     // atomic handle flex-wrap
     @if $key != 'flex-wrap' {
       /*x
@@ -17,9 +17,9 @@ $FlexWrap: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $FlexWrap {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include flex-wrap(#{$value}, #{$rwd});

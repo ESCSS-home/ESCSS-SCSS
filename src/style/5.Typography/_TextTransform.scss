@@ -1,4 +1,4 @@
-$TextTransform: (
+$data: (
   'uppercase': uppercase,
   'lowercase': lowercase,
   'capitalize': capitalize,
@@ -6,7 +6,7 @@ $TextTransform: (
 );
 
 @if $isBasic {
-  @each $key, $value in $TextTransform {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key}{
       @include text-transform(#{$value});
@@ -15,9 +15,9 @@ $TextTransform: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $TextTransform {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key}{
         @include text-transform(#{$value}, #{$rwd});

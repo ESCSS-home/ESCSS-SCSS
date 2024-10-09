@@ -1,4 +1,4 @@
-$Rotate: (
+$data: (
   'rotate-0': 0deg,
   'rotate-1': 1deg,
   'rotate-2': 2deg,
@@ -11,7 +11,7 @@ $Rotate: (
 );
 
 @if $isBasic {
-  @each $key, $value in $Rotate {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       $tw-rotate: #{$value} !global;
@@ -27,9 +27,9 @@ $Rotate: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $Rotate {
+    @each $key, $value in $data {
       /*x
     @mixin #{$rwdToken}\:#{$key} {
       $tw-rotate: #{$value} !global;

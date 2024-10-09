@@ -1,10 +1,10 @@
-$BackdropGrayscale: (
+$data: (
   'backdrop-grayscale-0': grayscale(0),
   'backdrop-grayscale': grayscale(100%),
 );
 
 @if $isBasic {
-  @each $key, $value in $BackdropGrayscale {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       $tw-backdrop-invert: #{$value} !global;
@@ -14,9 +14,9 @@ $BackdropGrayscale: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $BackdropGrayscale {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         $tw-backdrop-invert: #{$value} !global;

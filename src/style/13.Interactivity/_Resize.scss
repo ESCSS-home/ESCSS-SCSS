@@ -1,4 +1,4 @@
-$Resize: (
+$data: (
   'resize-none': none,
   'resize-y': vertical,
   'resize-x': horizontal,
@@ -6,7 +6,7 @@ $Resize: (
 );
 
 @if $isBasic {
-  @each $key, $value in $Resize {
+  @each $key, $value in $data {
     // atomic handle resize
     @if $key != 'resize' {
       /*x
@@ -18,9 +18,9 @@ $Resize: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $Resize {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include resize(#{$value}, #{$rwd});

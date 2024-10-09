@@ -1,4 +1,4 @@
-$_whiteSpace: (
+$data: (
   'whitespace-normal': normal,
   'whitespace-nowrap': nowrap,
   'whitespace-pre': pre,
@@ -8,7 +8,7 @@ $_whiteSpace: (
 );
 
 @if $isBasic {
-  @each $key, $value in $_whiteSpace {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key}{
       @include white-space(#{$value});
@@ -17,9 +17,9 @@ $_whiteSpace: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $_whiteSpace {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key}{
         @include white-space(#{$value}, #{$rwd});

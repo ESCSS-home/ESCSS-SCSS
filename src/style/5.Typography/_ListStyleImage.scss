@@ -1,9 +1,9 @@
-$ListStyleImage: (
+$data: (
   'list-image-none': none,
 );
 
 @if $isBasic {
-  @each $key, $value in $ListStyleImage {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include list-style-image(#{$value});
@@ -12,9 +12,9 @@ $ListStyleImage: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $ListStyleImage {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include list-style-image(#{$value}, #{$rwd});

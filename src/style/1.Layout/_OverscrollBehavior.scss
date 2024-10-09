@@ -1,23 +1,23 @@
-$group-OverscrollBehavior: (
+$data: (
   'overscroll-auto': auto,
   'overscroll-contain': contain,
   'overscroll-none': none,
 );
 
-$group-OverscrollBehavior-x: (
+$data-x: (
   'overscroll-x-auto': auto,
   'overscroll-x-contain': contain,
   'overscroll-x-none': none,
 );
 
-$group-OverscrollBehavior-y: (
+$data-y: (
   'overscroll-y-auto': auto,
   'overscroll-y-contain': contain,
   'overscroll-y-none': none,
 );
 
 @if $isBasic {
-  @each $key, $value in $group-OverscrollBehavior {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include overscroll-behavior(#{$value});
@@ -25,7 +25,7 @@ $group-OverscrollBehavior-y: (
     x*/
   }
 
-  @each $key, $value in $group-OverscrollBehavior-x {
+  @each $key, $value in $data-x {
     /*x
     @mixin #{$key} {
       @include overscroll-behavior-x(#{$value});
@@ -33,7 +33,7 @@ $group-OverscrollBehavior-y: (
     x*/
   }
 
-  @each $key, $value in $group-OverscrollBehavior-y {
+  @each $key, $value in $data-y {
     /*x
     @mixin #{$key} {
       @include overscroll-behavior-y(#{$value});
@@ -42,9 +42,9 @@ $group-OverscrollBehavior-y: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $group-OverscrollBehavior {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include overscroll-behavior(#{$value}, #{$rwd});
@@ -52,7 +52,7 @@ $group-OverscrollBehavior-y: (
       x*/
     }
 
-    @each $key, $value in $group-OverscrollBehavior-x {
+    @each $key, $value in $data-x {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include overscroll-behavior-x(#{$value}, #{$rwd});
@@ -60,7 +60,7 @@ $group-OverscrollBehavior-y: (
       x*/
     }
 
-    @each $key, $value in $group-OverscrollBehavior-y {
+    @each $key, $value in $data-y {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include overscroll-behavior-y(#{$value}, #{$rwd});

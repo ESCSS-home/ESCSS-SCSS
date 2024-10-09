@@ -1,4 +1,4 @@
-$TouchAction: (
+$data: (
   'touch-auto': auto,
   'touch-none': none,
   'touch-pan-x': pan-x,
@@ -12,7 +12,7 @@ $TouchAction: (
 );
 
 @if $isBasic {
-  @each $key, $value in $TouchAction {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include touch-action(#{$value});
@@ -21,9 +21,9 @@ $TouchAction: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $TouchAction {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include touch-action(#{$value}, #{$rwd});

@@ -1,7 +1,7 @@
-// 1st: transition-property
-// 2nd: transition-timing-function
-// 3rd: transition-duration
-$TransitionProperty: (
+// 1st property: transition-property
+// 2nd property: transition-timing-function
+// 3rd property: transition-duration
+$data: (
   'transition-none': (
     none,
     'null',
@@ -40,7 +40,7 @@ $TransitionProperty: (
 );
 
 @if $isBasic {
-  @each $key, $value in $TransitionProperty {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include transition-property(#{list.nth($value, 1)});
@@ -51,9 +51,9 @@ $TransitionProperty: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $TransitionProperty {
+    @each $key, $value in $data {
       /*x
     @mixin #{$rwdToken}\:#{$key} {
       @include #{$rwdToken} {

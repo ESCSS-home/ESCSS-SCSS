@@ -1,4 +1,4 @@
-$SpaceBetween: (
+$data: (
   '0': '$_0',
   'px': '$_px',
   '0\\.5': '$_0\\.5',
@@ -57,7 +57,7 @@ $SpaceBetween: (
   }
   x*/
 
-  @each $key, $value in $SpaceBetween {
+  @each $key, $value in $data {
     /*x
     @mixin space-x-#{$key} {
       $tw-dummy-space-x-value: #{$value} !global;
@@ -80,7 +80,7 @@ $SpaceBetween: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
     /*x
     @mixin #{$rwdToken}\:space-x-reverse {
@@ -106,7 +106,7 @@ $SpaceBetween: (
     }
     x*/
 
-    @each $key, $value in $SpaceBetween {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:space-x-#{$key} {
         $tw-dummy-space-x-value: #{$value} !global;
@@ -201,7 +201,7 @@ $SpaceBetween: (
         }
       }
     x*/
-    @each $key, $value in $SpaceBetween {
+    @each $key, $value in $data {
       /*x
       @mixin -space-x-#{$key} {
         $tw-dummy-space-x-value: -#{$value} !global;
@@ -224,7 +224,7 @@ $SpaceBetween: (
     }
   }
 
-  @if $isRwd and (not $isAwaken) {
+  @if $isResponsive and (not $isAwaken) {
     @each $rwdToken, $rwd in $rwdBox {
       /*x
       @mixin #{$rwdToken}\:-space-x-reverse {
@@ -249,7 +249,7 @@ $SpaceBetween: (
         }
       }
       x*/
-      @each $key, $value in $SpaceBetween {
+      @each $key, $value in $data {
         /*x
         @mixin #{$rwdToken}\:-space-x-#{$key} {
           $tw-dummy-space-x-value: -#{$value} !global;

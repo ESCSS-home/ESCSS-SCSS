@@ -1,4 +1,4 @@
-$TextWrap: (
+$data: (
   'text-wrap': wrap,
   'text-nowrap': nowrap,
   'text-balance': balance,
@@ -6,7 +6,7 @@ $TextWrap: (
 );
 
 @if $isBasic {
-  @each $key, $value in $TextWrap {
+  @each $key, $value in $data {
     // atomic handle text-wrap
     @if $key != 'text-wrap' {
       /*x
@@ -18,9 +18,9 @@ $TextWrap: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $TextWrap {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include text-wrap(#{$value}, #{$rwd});

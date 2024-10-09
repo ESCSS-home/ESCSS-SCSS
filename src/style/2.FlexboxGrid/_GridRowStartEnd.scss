@@ -1,4 +1,4 @@
-$group-GridRowStartEnd: (
+$data: (
   'row-auto': auto,
   'row-span-1': span 1 / span 1,
   'row-span-2': span 2 / span 2,
@@ -15,7 +15,7 @@ $group-GridRowStartEnd: (
   'row-span-full': '#/*x{1 / -1}',
 );
 
-$group-GridRowStartEnd-start: (
+$data-start: (
   'row-start-1': 1,
   'row-start-2': 2,
   'row-start-3': 3,
@@ -32,7 +32,7 @@ $group-GridRowStartEnd-start: (
   'row-start-auto': auto,
 );
 
-$group-GridRowStartEnd-end: (
+$data-end: (
   'row-end-1': 1,
   'row-end-2': 2,
   'row-end-3': 3,
@@ -50,7 +50,7 @@ $group-GridRowStartEnd-end: (
 );
 
 @if $isBasic {
-  @each $key, $value in $group-GridRowStartEnd {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include grid-row(#{$value});
@@ -58,7 +58,7 @@ $group-GridRowStartEnd-end: (
     x*/
   }
 
-  @each $key, $value in $group-GridRowStartEnd-start {
+  @each $key, $value in $data-start {
     /*x
     @mixin #{$key} {
       @include grid-row-start(#{$value});
@@ -66,7 +66,7 @@ $group-GridRowStartEnd-end: (
     x*/
   }
 
-  @each $key, $value in $group-GridRowStartEnd-end {
+  @each $key, $value in $data-end {
     /*x
     @mixin #{$key} {
       @include grid-row-end(#{$value});
@@ -75,9 +75,9 @@ $group-GridRowStartEnd-end: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $group-GridRowStartEnd {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include grid-row(#{$value}, #{$rwd});
@@ -85,7 +85,7 @@ $group-GridRowStartEnd-end: (
       x*/
     }
 
-    @each $key, $value in $group-GridRowStartEnd-start {
+    @each $key, $value in $data-start {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include grid-row-start(#{$value}, #{$rwd});
@@ -93,7 +93,7 @@ $group-GridRowStartEnd-end: (
       x*/
     }
 
-    @each $key, $value in $group-GridRowStartEnd-end {
+    @each $key, $value in $data-end {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include grid-row-end(#{$value}, #{$rwd});

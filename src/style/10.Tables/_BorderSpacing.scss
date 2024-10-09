@@ -1,4 +1,4 @@
-$BorderSpacing: (
+$data: (
   '0': '$_0',
   'px': '$_px',
   '0\\.5': '$_0\\.5',
@@ -37,7 +37,7 @@ $BorderSpacing: (
 );
 
 @if $isBasic {
-  @each $key, $value in $BorderSpacing {
+  @each $key, $value in $data {
     /*x
     @mixin border-spacing-#{$key} {
       @include border-spacing((#{$value}) (#{$value}));
@@ -54,9 +54,9 @@ $BorderSpacing: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $BorderSpacing {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:border-spacing-#{$key} {
         @include border-spacing((#{$value}) (#{$value}), #{$rwd});

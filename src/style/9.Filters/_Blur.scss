@@ -1,4 +1,4 @@
-$Blur: (
+$data: (
   'blur-none': blur(0),
   'blur-sm': blur(4px),
   'blur': blur(8px),
@@ -10,7 +10,7 @@ $Blur: (
 );
 
 @if $isBasic {
-  @each $key, $value in $Blur {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       $tw-blur: #{$value} !global;
@@ -20,9 +20,9 @@ $Blur: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $Blur {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         $tw-blur: #{$value} !global;

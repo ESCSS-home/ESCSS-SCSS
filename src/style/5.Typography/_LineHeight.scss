@@ -1,4 +1,4 @@
-$LineHeight: (
+$data: (
   'leading-3': '$_leading-3',
   'leading-4': '$_leading-4',
   'leading-5': '$_leading-5',
@@ -16,7 +16,7 @@ $LineHeight: (
 );
 
 @if $isBasic {
-  @each $key, $value in $LineHeight {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include line-height(#{$value});
@@ -25,9 +25,9 @@ $LineHeight: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $LineHeight {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include line-height(#{$value}, #{$rwd});

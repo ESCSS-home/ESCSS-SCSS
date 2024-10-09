@@ -1,4 +1,4 @@
-$TransitionTimingFunction: (
+$data: (
   'ease-linear': linear,
   'ease-in': cubic-bezier(0.4, 0, 1, 1),
   'ease-out': cubic-bezier(0, 0, 0.2, 1),
@@ -6,7 +6,7 @@ $TransitionTimingFunction: (
 );
 
 @if $isBasic {
-  @each $key, $value in $TransitionTimingFunction {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include transition-timing-function(#{$value});
@@ -15,9 +15,9 @@ $TransitionTimingFunction: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $TransitionTimingFunction {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include transition-timing-function(#{$value}, #{$rwd});

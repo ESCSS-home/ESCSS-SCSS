@@ -1,4 +1,4 @@
-$ScrollMargin: (
+$data: (
   '0': '$_0',
   'px': '$_px',
   '0\\.5': '$_0\\.5',
@@ -37,7 +37,7 @@ $ScrollMargin: (
 );
 
 @if $isBasic {
-  @each $key, $value in $ScrollMargin {
+  @each $key, $value in $data {
     /*x
     @mixin scroll-m-#{$key} {
       @include scroll-margin(#{$value});
@@ -80,9 +80,9 @@ $ScrollMargin: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $ScrollMargin {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:scroll-m-#{$key} {
         @include scroll-margin(#{$value}, #{$rwd});
@@ -218,7 +218,7 @@ $ScrollMargin: (
 
 @if $isNegative {
   @if $isBasic {
-    @each $key, $value in $ScrollMargin {
+    @each $key, $value in $data {
       /*x
       @mixin -scroll-m-#{$key} {
         @include scroll-margin(-#{$value});
@@ -261,9 +261,9 @@ $ScrollMargin: (
     }
   }
 
-  @if $isRwd and (not $isAwaken) {
+  @if $isResponsive and (not $isAwaken) {
     @each $rwdToken, $rwd in $rwdBox {
-      @each $key, $value in $ScrollMargin {
+      @each $key, $value in $data {
         /*x
         @mixin #{$rwdToken}\:-scroll-m-#{$key} {
           @include scroll-margin(-#{$value}, #{$rwd});

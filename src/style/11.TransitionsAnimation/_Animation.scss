@@ -1,4 +1,4 @@
-$Animation: (
+$data: (
   'animate-none': none,
   'animate-spin': spin 1s linear infinite,
   'animate-ping': ping 1s cubic-bezier(0, 0, 0.2, 1) infinite,
@@ -7,7 +7,7 @@ $Animation: (
 );
 
 @if $isBasic {
-  @each $key, $value in $Animation {
+  @each $key, $value in $data {
     @if $key == 'animate-none' {
       /*x
       @mixin #{$key} {
@@ -71,9 +71,9 @@ $Animation: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $Animation {
+    @each $key, $value in $data {
       @if $key == 'animate-none' {
         /*x
         @mixin #{$rwdToken}\:#{$key} {

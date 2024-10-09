@@ -1,4 +1,4 @@
-$ObjectPosition: (
+$data: (
   'object-bottom': bottom,
   'object-center': center,
   'object-left': left,
@@ -11,7 +11,7 @@ $ObjectPosition: (
 );
 
 @if $isBasic {
-  @each $key, $value in $ObjectPosition {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include object-position(#{$value});
@@ -20,9 +20,9 @@ $ObjectPosition: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $ObjectPosition {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include object-position(#{$value}, #{$rwd});

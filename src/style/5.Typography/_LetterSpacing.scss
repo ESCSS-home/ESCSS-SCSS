@@ -1,4 +1,4 @@
-$LetterSpacing: (
+$data: (
   'tracking-tighter': '$_tighter',
   'tracking-tight': '$_tight',
   'tracking-normal': '$_normal',
@@ -8,7 +8,7 @@ $LetterSpacing: (
 );
 
 @if $isBasic {
-  @each $key, $value in $LetterSpacing {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include letter-spacing(#{$value});
@@ -17,9 +17,9 @@ $LetterSpacing: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $LetterSpacing {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include letter-spacing(#{$value}, #{$rwd});
@@ -45,7 +45,7 @@ $LetterSpacing: (
 
 @if $isNegative {
   @if $isBasic {
-    @each $key, $value in $LetterSpacing {
+    @each $key, $value in $data {
       /*x
       @mixin -#{$key} {
         @include letter-spacing(-#{$value});
@@ -54,9 +54,9 @@ $LetterSpacing: (
     }
   }
 
-  @if $isRwd and (not $isAwaken) {
+  @if $isResponsive and (not $isAwaken) {
     @each $rwdToken, $rwd in $rwdBox {
-      @each $key, $value in $LetterSpacing {
+      @each $key, $value in $data {
         /*x
         @mixin #{$rwdToken}\:-#{$key} {
           @include letter-spacing(-#{$value}, #{$rwd});

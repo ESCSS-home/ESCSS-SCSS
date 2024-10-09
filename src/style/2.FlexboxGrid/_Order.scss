@@ -1,4 +1,4 @@
-$Order: (
+$data: (
   'order-1': 1,
   'order-2': 2,
   'order-3': 3,
@@ -17,7 +17,7 @@ $Order: (
 );
 
 @if $isBasic {
-  @each $key, $value in $Order {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include order(#{$value});
@@ -26,9 +26,9 @@ $Order: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $Order {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include order(#{$value}, #{$rwd});
@@ -54,7 +54,7 @@ $Order: (
 
 @if $isNegative {
   @if $isBasic {
-    @each $key, $value in $Order {
+    @each $key, $value in $data {
       /*x
       @mixin -#{$key} {
         @include order(#{-$value});
@@ -63,9 +63,9 @@ $Order: (
     }
   }
 
-  @if $isRwd and (not $isAwaken) {
+  @if $isResponsive and (not $isAwaken) {
     @each $rwdToken, $rwd in $rwdBox {
-      @each $key, $value in $Order {
+      @each $key, $value in $data {
         /*x
         @mixin #{$rwdToken}\:-#{$key} {
           @include order(#{-$value}, #{$rwd});

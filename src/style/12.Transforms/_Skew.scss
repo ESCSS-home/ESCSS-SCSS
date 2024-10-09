@@ -1,4 +1,4 @@
-$Skew: (
+$data: (
   '0': 0deg,
   '1': 1deg,
   '2': 2deg,
@@ -8,7 +8,7 @@ $Skew: (
 );
 
 @if $isBasic {
-  @each $key, $value in $Skew {
+  @each $key, $value in $data {
     /*x
     @mixin skew-x-#{$key} {
       $tw-skew-x: #{$value} !global;
@@ -23,9 +23,9 @@ $Skew: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $Skew {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:skew-x-#{$key} {
         $tw-skew-x: #{$value} !global;
@@ -69,7 +69,7 @@ $Skew: (
 
 @if $isNegative {
   @if $isBasic {
-    @each $key, $value in $Skew {
+    @each $key, $value in $data {
       /*x
       @mixin -skew-x-#{$key} {
         $tw-skew-x: #{-$value} !global;
@@ -84,9 +84,9 @@ $Skew: (
     }
   }
 
-  @if $isRwd and (not $isAwaken) {
+  @if $isResponsive and (not $isAwaken) {
     @each $rwdToken, $rwd in $rwdBox {
-      @each $key, $value in $Skew {
+      @each $key, $value in $data {
         /*x
         @mixin #{$rwdToken}\:-skew-x-#{$key} {
           $tw-skew-x: #{-$value} !global;

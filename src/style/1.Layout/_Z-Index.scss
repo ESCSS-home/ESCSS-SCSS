@@ -1,4 +1,4 @@
-$Z-Index: (
+$data: (
   'z-0': 0,
   'z-10': 10,
   'z-20': 20,
@@ -9,7 +9,7 @@ $Z-Index: (
 );
 
 @if $isBasic {
-  @each $key, $value in $Z-Index {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include z-index(#{$value});
@@ -18,9 +18,9 @@ $Z-Index: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $Z-Index {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include z-index(#{$value}, #{$rwd});
@@ -46,7 +46,7 @@ $Z-Index: (
 
 @if $isNegative {
   @if $isBasic {
-    @each $key, $value in $Z-Index {
+    @each $key, $value in $data {
       /*x
       @mixin -#{$key} {
         @include z-index(-#{$value});
@@ -55,9 +55,9 @@ $Z-Index: (
     }
   }
 
-  @if $isRwd and (not $isAwaken) {
+  @if $isResponsive and (not $isAwaken) {
     @each $rwdToken, $rwd in $rwdBox {
-      @each $key, $value in $Z-Index {
+      @each $key, $value in $data {
         /*x
         @mixin #{$rwdToken}\:-#{$key} {
           @include z-index(#{-$value}, #{$rwd});

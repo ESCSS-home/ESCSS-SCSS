@@ -1,10 +1,10 @@
-$BackdropSepia: (
+$data: (
   'backdrop-sepia-0': sepia(0),
   'backdrop-sepia': sepia(100%),
 );
 
 @if $isBasic {
-  @each $key, $value in $BackdropSepia {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       $tw-backdrop-sepia: #{$value} !global;
@@ -14,9 +14,9 @@ $BackdropSepia: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $BackdropSepia {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         $tw-backdrop-sepia: #{$value} !global;

@@ -1,4 +1,4 @@
-$BackgroundsRepeat: (
+$data: (
   'bg-repeat': repeat,
   'bg-no-repeat': no-repeat,
   'bg-repeat-x': repeat-x,
@@ -8,7 +8,7 @@ $BackgroundsRepeat: (
 );
 
 @if $isBasic {
-  @each $key, $value in $BackgroundsRepeat {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key}{
       @include background-repeat(#{$value});
@@ -17,9 +17,9 @@ $BackgroundsRepeat: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $BackgroundsRepeat {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key}{
         @include background-repeat(#{$value}, #{$rwd});

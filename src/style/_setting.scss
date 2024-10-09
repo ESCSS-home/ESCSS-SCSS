@@ -1,5 +1,5 @@
-// test in my MacBook Air 2020, intel Core 3 in awaken.scss
-// update time around 0.7s
+// update time in awaken.scss
+// MacBook Air 2020 | intel Core 3 | 8G | ~0.7s
 
 // true: generate light version for production(awaken.scss) <900 KB>
 // false: generate full version to run all 79067 test cases <7.77MB>
@@ -7,7 +7,7 @@ $isAwaken: true;
 
 // Controlling render output
 $isBasic: true; // Tailwind classes
-$isRwd: true; // Tailwind classes which have media queries
+$isResponsive: true; // Tailwind classes which have media queries
 $isArbitrary: true; // Tailwind classes which have arbitrary values
 $isNegative: true; // Tailwind tailwind negative utils
 

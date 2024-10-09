@@ -1,4 +1,4 @@
-$TransitionDuration: (
+$data: (
   'duration-0': 0s,
   'duration-75': 75ms,
   'duration-100': 100ms,
@@ -11,7 +11,7 @@ $TransitionDuration: (
 );
 
 @if $isBasic {
-  @each $key, $value in $TransitionDuration {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include transition-duration(#{$value});
@@ -20,9 +20,9 @@ $TransitionDuration: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $TransitionDuration {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include transition-duration(#{$value}, #{$rwd});

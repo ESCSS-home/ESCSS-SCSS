@@ -1,6 +1,6 @@
-// 1st: -webkit-font-smoothing
-// 2nd: -moz-osx-font-smoothing
-$FontSmoothing: (
+// 1st property: -webkit-font-smoothing
+// 2nd property: -moz-osx-font-smoothing
+$data: (
   'antialiased': (
     antialiased,
     grayscale,
@@ -12,7 +12,7 @@ $FontSmoothing: (
 );
 
 @if $isBasic {
-  @each $key, $value in $FontSmoothing {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include -webkit-font-smoothing(#{list.nth($value, 1)});
@@ -22,9 +22,9 @@ $FontSmoothing: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $FontSmoothing {
+    @each $key, $value in $data {
       /*x
         @mixin #{$rwdToken}\:#{$key} {
           @include #{$rwdToken} {

@@ -1,4 +1,4 @@
-$Columns: (
+$data: (
   'columns-1': 1,
   'columns-2': 2,
   'columns-3': 3,
@@ -28,7 +28,7 @@ $Columns: (
 );
 
 @if $isBasic {
-  @each $key, $value in $Columns {
+  @each $key, $value in $data {
     /*x
     @mixin #{$key} {
       @include columns(#{$value});
@@ -37,9 +37,9 @@ $Columns: (
   }
 }
 
-@if $isRwd and (not $isAwaken) {
+@if $isResponsive and (not $isAwaken) {
   @each $rwdToken, $rwd in $rwdBox {
-    @each $key, $value in $Columns {
+    @each $key, $value in $data {
       /*x
       @mixin #{$rwdToken}\:#{$key} {
         @include columns(#{$value}, #{$rwd});
